@@ -257,6 +257,7 @@
     var dialog = document.getElementById('search-dialog');
     var closeBtn = document.getElementById('search-close');
     var openBtn = document.getElementById('search-open');
+    var openBtnMobile = document.getElementById('search-open-mobile');
     var pagefindInitialized = false;
 
     function openSearch() {
@@ -286,6 +287,7 @@
 
     if (closeBtn) closeBtn.addEventListener('click', closeSearch);
     if (openBtn) openBtn.addEventListener('click', openSearch);
+    if (openBtnMobile) openBtnMobile.addEventListener('click', openSearch);
 
     if (dialog) {
       dialog.addEventListener('click', function (e) {

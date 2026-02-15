@@ -45,7 +45,29 @@ test.describe('FAQ', () => {
   test('visual reference guides section exists', async ({ page }) => {
     await page.goto(`${BASE}/faq/`);
     await expect(page.locator('.visual-guides')).toBeVisible();
-    await expect(page.locator('.planting-calendar')).toBeVisible();
+    await expect(page.locator('.planting-calendar-timeline')).toBeVisible();
     await expect(page.locator('.sun-cards')).toBeVisible();
+  });
+
+  test('planting calendar timeline displays all crops', async ({ page }) => {
+    await page.goto(`${BASE}/faq/`);
+    const rows = page.locator('.timeline-row');
+    await expect(rows).toHaveCount(8);
+    const crops = ['Lettuce', 'Basil', 'Tomatoes', 'Peppers', 'Radishes', 'Carrots', 'Microgreens', 'Herbs (indoor)'];
+    for (const crop of crops) {
+      await expect(page.locator(`.timeline-crop-name:has-text("${crop}")`)).toBeVisible();
+    }
+  });
+
+  test('companion planting symbols have visual weight', async ({ page }) => {
+    await page.goto(`${BASE}/faq/`);
+    await expect(page.locator('.companion-symbol').first()).toBeVisible();
+  });
+
+  test('pH scale has positioned range indicators', async ({ page }) => {
+    await page.goto(`${BASE}/faq/`);
+    await expect(page.locator('.ph-range-rows')).toBeVisible();
+    const ranges = page.locator('.ph-range');
+    await expect(ranges.first()).toBeVisible();
   });
 });
