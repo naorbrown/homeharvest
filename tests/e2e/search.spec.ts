@@ -34,9 +34,16 @@ test.describe('Search', () => {
   });
 
   test('search trigger button opens dialog on desktop', async ({ page }) => {
-    test.skip(test.info().project.name === 'mobile', 'Search button hidden on mobile');
+    await page.setViewportSize({ width: 1024, height: 768 });
     await page.goto(`${BASE}/`);
     await page.locator('#search-open').click();
+    await expect(page.locator('#search-dialog')).toBeVisible();
+  });
+
+  test('mobile search icon opens dialog', async ({ page }) => {
+    await page.setViewportSize({ width: 375, height: 667 });
+    await page.goto(`${BASE}/`);
+    await page.locator('#search-open-mobile').click();
     await expect(page.locator('#search-dialog')).toBeVisible();
   });
 
@@ -45,6 +52,15 @@ test.describe('Search', () => {
     for (const p of pages) {
       await page.goto(`${BASE}${p}`);
       await expect(page.locator('#search-dialog')).toBeAttached();
+    }
+  });
+
+  test('mobile search button exists on all pages', async ({ page }) => {
+    await page.setViewportSize({ width: 375, height: 667 });
+    const pages = ['/', '/guides/', '/faq/'];
+    for (const p of pages) {
+      await page.goto(`${BASE}${p}`);
+      await expect(page.locator('#search-open-mobile')).toBeVisible();
     }
   });
 });

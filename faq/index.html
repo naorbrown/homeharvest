@@ -41,10 +41,13 @@
           <li><a href="/homeharvest/faq/">FAQ</a></li>
         </ul>
       </nav>
-      <button type="button" id="search-open" class="search-trigger" aria-label="Search (Cmd+K)">
+      <button type="button" id="search-open" class="search-trigger search-trigger--desktop" aria-label="Search">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        <span class="search-trigger-label">Search</span>
+        <span>Search…</span>
         <kbd class="search-kbd">&#8984;K</kbd>
+      </button>
+      <button type="button" id="search-open-mobile" class="search-trigger search-trigger--mobile" aria-label="Search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
       </button>
       <button type="button" class="mobile-menu-btn" aria-label="Open menu" onclick="document.getElementById('mobile-nav').showModal()">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/></svg>
@@ -239,45 +242,79 @@
           <p class="infographic-desc">When to sow, transplant, and harvest common crops (Northern Hemisphere, temperate zones).</p>
 
           <div class="calendar-legend">
-            <div class="calendar-legend-item"><div class="calendar-legend-swatch" style="background-color: rgba(90, 143, 90, 0.3);"></div> Sow</div>
-            <div class="calendar-legend-item"><div class="calendar-legend-swatch" style="background-color: rgba(196, 160, 78, 0.3);"></div> Transplant</div>
-            <div class="calendar-legend-item"><div class="calendar-legend-swatch" style="background-color: rgba(139, 109, 75, 0.3);"></div> Harvest</div>
+            <div class="calendar-legend-item"><div class="calendar-legend-swatch calendar-legend-swatch--sow"></div> Sow</div>
+            <div class="calendar-legend-item"><div class="calendar-legend-swatch calendar-legend-swatch--transplant"></div> Transplant</div>
+            <div class="calendar-legend-item"><div class="calendar-legend-swatch calendar-legend-swatch--harvest"></div> Harvest</div>
           </div>
 
-          <div class="planting-calendar">
-            <table>
-              <thead>
-                <tr>
-                  <th>Crop</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Lettuce</td><td></td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td></td>
-                </tr>
-                <tr>
-                  <td>Basil</td><td></td><td></td><td class="cal-sow">sow</td><td class="cal-transplant">move</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td></td><td></td><td></td>
-                </tr>
-                <tr>
-                  <td>Tomatoes</td><td></td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-transplant">move</td><td class="cal-transplant">move</td><td></td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td></td><td></td>
-                </tr>
-                <tr>
-                  <td>Peppers</td><td></td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-transplant">move</td><td class="cal-transplant">move</td><td></td><td></td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td></td><td></td>
-                </tr>
-                <tr>
-                  <td>Radishes</td><td></td><td></td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td></td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-harvest">pick</td><td></td><td></td>
-                </tr>
-                <tr>
-                  <td>Carrots</td><td></td><td></td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td></td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td></td><td></td>
-                </tr>
-                <tr>
-                  <td>Microgreens</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td>
-                </tr>
-                <tr>
-                  <td>Herbs (indoor)</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="planting-calendar-timeline">
+            <div class="timeline-header">
+              <div class="timeline-crop-label">Crop</div>
+              <div class="timeline-months">
+                <span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span><span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span>
+              </div>
+            </div>
+            <div class="timeline-row">
+              <div class="timeline-crop-name">Lettuce</div>
+              <div class="timeline-bars">
+                <div class="timeline-bar timeline-bar--sow" style="grid-column: 2 / 5;"></div>
+                <div class="timeline-bar timeline-bar--harvest" style="grid-column: 5 / 8;"></div>
+                <div class="timeline-bar timeline-bar--sow" style="grid-column: 8 / 10;"></div>
+                <div class="timeline-bar timeline-bar--harvest" style="grid-column: 10 / 12;"></div>
+              </div>
+            </div>
+            <div class="timeline-row">
+              <div class="timeline-crop-name">Basil</div>
+              <div class="timeline-bars">
+                <div class="timeline-bar timeline-bar--sow" style="grid-column: 3 / 4;"></div>
+                <div class="timeline-bar timeline-bar--transplant" style="grid-column: 4 / 5;"></div>
+                <div class="timeline-bar timeline-bar--harvest" style="grid-column: 5 / 10;"></div>
+              </div>
+            </div>
+            <div class="timeline-row">
+              <div class="timeline-crop-name">Tomatoes</div>
+              <div class="timeline-bars">
+                <div class="timeline-bar timeline-bar--sow" style="grid-column: 2 / 4;"></div>
+                <div class="timeline-bar timeline-bar--transplant" style="grid-column: 4 / 6;"></div>
+                <div class="timeline-bar timeline-bar--harvest" style="grid-column: 7 / 11;"></div>
+              </div>
+            </div>
+            <div class="timeline-row">
+              <div class="timeline-crop-name">Peppers</div>
+              <div class="timeline-bars">
+                <div class="timeline-bar timeline-bar--sow" style="grid-column: 2 / 4;"></div>
+                <div class="timeline-bar timeline-bar--transplant" style="grid-column: 4 / 6;"></div>
+                <div class="timeline-bar timeline-bar--harvest" style="grid-column: 8 / 11;"></div>
+              </div>
+            </div>
+            <div class="timeline-row">
+              <div class="timeline-crop-name">Radishes</div>
+              <div class="timeline-bars">
+                <div class="timeline-bar timeline-bar--sow" style="grid-column: 3 / 5;"></div>
+                <div class="timeline-bar timeline-bar--harvest" style="grid-column: 5 / 7;"></div>
+                <div class="timeline-bar timeline-bar--sow" style="grid-column: 8 / 10;"></div>
+                <div class="timeline-bar timeline-bar--harvest" style="grid-column: 10 / 11;"></div>
+              </div>
+            </div>
+            <div class="timeline-row">
+              <div class="timeline-crop-name">Carrots</div>
+              <div class="timeline-bars">
+                <div class="timeline-bar timeline-bar--sow" style="grid-column: 3 / 6;"></div>
+                <div class="timeline-bar timeline-bar--harvest" style="grid-column: 7 / 11;"></div>
+              </div>
+            </div>
+            <div class="timeline-row">
+              <div class="timeline-crop-name">Microgreens</div>
+              <div class="timeline-bars">
+                <div class="timeline-bar timeline-bar--sow" style="grid-column: 1 / 13;"></div>
+              </div>
+            </div>
+            <div class="timeline-row">
+              <div class="timeline-crop-name">Herbs (indoor)</div>
+              <div class="timeline-bars">
+                <div class="timeline-bar timeline-bar--harvest" style="grid-column: 1 / 13;"></div>
+              </div>
+            </div>
           </div>
 
           <!-- 2. Companion Planting Chart -->
@@ -297,62 +334,66 @@
               <tbody>
                 <tr>
                   <th class="seasonal-season">Tomatoes</th>
-                  <td class="companion-neutral">&mdash;</td>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-bad">&#10007;</td>
+                  <td class="companion-neutral"><span class="companion-symbol">&mdash;</span></td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-bad"><span class="companion-symbol">&#10007;</span></td>
                 </tr>
                 <tr>
                   <th class="seasonal-season">Basil</th>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-neutral">&mdash;</td>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-neutral">&mdash;</td>
-                  <td class="companion-neutral">&mdash;</td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-neutral"><span class="companion-symbol">&mdash;</span></td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-neutral"><span class="companion-symbol">&mdash;</span></td>
+                  <td class="companion-neutral"><span class="companion-symbol">&mdash;</span></td>
                 </tr>
                 <tr>
                   <th class="seasonal-season">Peppers</th>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-neutral">&mdash;</td>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-bad">&#10007;</td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-neutral"><span class="companion-symbol">&mdash;</span></td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-bad"><span class="companion-symbol">&#10007;</span></td>
                 </tr>
                 <tr>
                   <th class="seasonal-season">Lettuce</th>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-neutral">&mdash;</td>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-neutral"><span class="companion-symbol">&mdash;</span></td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
                 </tr>
                 <tr>
                   <th class="seasonal-season">Carrots</th>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-neutral">&mdash;</td>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-neutral">&mdash;</td>
-                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-neutral"><span class="companion-symbol">&mdash;</span></td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-neutral"><span class="companion-symbol">&mdash;</span></td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
                 </tr>
                 <tr>
                   <th class="seasonal-season">Beans</th>
-                  <td class="companion-bad">&#10007;</td>
-                  <td class="companion-neutral">&mdash;</td>
-                  <td class="companion-bad">&#10007;</td>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-good">&#10003;</td>
-                  <td class="companion-neutral">&mdash;</td>
+                  <td class="companion-bad"><span class="companion-symbol">&#10007;</span></td>
+                  <td class="companion-neutral"><span class="companion-symbol">&mdash;</span></td>
+                  <td class="companion-bad"><span class="companion-symbol">&#10007;</span></td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-good"><span class="companion-symbol">&#10003;</span></td>
+                  <td class="companion-neutral"><span class="companion-symbol">&mdash;</span></td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p style="font-size: 0.75rem; color: rgba(228, 232, 227, 0.3); margin-top: 0.5rem; margin-bottom: 1.5rem;">&#10003; = good companions &middot; &#10007; = keep apart &middot; &mdash; = neutral</p>
+          <div class="companion-legend">
+            <span class="companion-legend-item"><span class="companion-symbol companion-symbol--good">&#10003;</span> Good companions</span>
+            <span class="companion-legend-item"><span class="companion-symbol companion-symbol--bad">&#10007;</span> Keep apart</span>
+            <span class="companion-legend-item"><span class="companion-symbol companion-symbol--neutral">&mdash;</span> Neutral</span>
+          </div>
 
           <!-- 3. Sunlight Requirements -->
           <h3 class="infographic-title">
@@ -422,15 +463,21 @@
               <span>8.0 &mdash; Alkaline</span>
             </div>
             <div class="ph-scale" aria-label="pH scale from acidic (4.0) to alkaline (8.0)"></div>
-            <div class="ph-markers">
-              <div class="ph-marker">Blueberries <span>4.5&ndash;5.5</span></div>
-              <div class="ph-marker">Potatoes <span>5.0&ndash;6.0</span></div>
-              <div class="ph-marker">Tomatoes <span>6.0&ndash;6.8</span></div>
-              <div class="ph-marker">Peppers <span>6.0&ndash;7.0</span></div>
-              <div class="ph-marker">Lettuce <span>6.0&ndash;7.0</span></div>
-              <div class="ph-marker">Herbs <span>6.0&ndash;7.5</span></div>
-              <div class="ph-marker">Beans <span>6.0&ndash;7.5</span></div>
-              <div class="ph-marker">Brassicas <span>6.5&ndash;7.5</span></div>
+            <div class="ph-range-rows">
+              <div class="ph-range-row">
+                <div class="ph-range" style="left: 12.5%; width: 25%;"><span class="ph-range-label">Blueberries</span><span class="ph-range-bar"></span></div>
+                <div class="ph-range" style="left: 50%; width: 20%;"><span class="ph-range-label">Tomatoes</span><span class="ph-range-bar"></span></div>
+                <div class="ph-range" style="left: 50%; width: 37.5%;"><span class="ph-range-label">Herbs</span><span class="ph-range-bar"></span></div>
+              </div>
+              <div class="ph-range-row">
+                <div class="ph-range" style="left: 25%; width: 25%;"><span class="ph-range-label">Potatoes</span><span class="ph-range-bar"></span></div>
+                <div class="ph-range" style="left: 50%; width: 25%;"><span class="ph-range-label">Peppers</span><span class="ph-range-bar"></span></div>
+                <div class="ph-range" style="left: 50%; width: 37.5%;"><span class="ph-range-label">Beans</span><span class="ph-range-bar"></span></div>
+              </div>
+              <div class="ph-range-row">
+                <div class="ph-range" style="left: 50%; width: 25%;"><span class="ph-range-label">Lettuce</span><span class="ph-range-bar"></span></div>
+                <div class="ph-range" style="left: 62.5%; width: 25%;"><span class="ph-range-label">Brassicas</span><span class="ph-range-bar"></span></div>
+              </div>
             </div>
           </div>
 
