@@ -59,6 +59,8 @@
   </dialog>
   <!-- HEADER:END -->
 
+  <div class="reading-progress" aria-hidden="true"><div class="reading-progress-bar"></div></div>
+
   <main>
     <article class="detail-article">
       <nav aria-label="Breadcrumb" class="breadcrumb">
@@ -102,30 +104,61 @@
             </div>
           </div>
 
-          <div class="prose">
-            <h2>Overview</h2>
-            <p>Hydroponics is growing plants without soil by delivering dissolved nutrients directly to the roots through water. It sounds high-tech, but the simplest hydroponic setup is a mason jar with a net pot and some nutrient solution &mdash; something you can build in 10 minutes for under $5.</p>
-            <p>The reason hydroponics works so well is root efficiency. In soil, roots spend energy searching through particles for water and nutrients. In hydroponics, roots sit in or near a nutrient solution that gives them everything they need immediately. The result is 30&ndash;50% faster growth and significantly higher yields per square foot compared to soil. Plants that take 60 days in soil can mature in 40 days hydroponically.</p>
-            <p>The tradeoff is attention. Soil is forgiving &mdash; it buffers pH swings, holds moisture, and releases nutrients slowly. Water has no buffer. If the pH drifts or nutrients run out, plants feel it within hours, not days. Hydroponics rewards growers who check their systems regularly and enjoy the precision of dialing in nutrient levels.</p>
+          <div class="tldr-box">
+            <div class="tldr-label">TL;DR</div>
+            <ul>
+              <li>Higher upfront cost ($100&ndash;300) but highest yields per square foot of any growing method</li>
+              <li>Kratky method is the simplest entry point &mdash; no pumps, no electricity, just a jar and nutrients</li>
+              <li>Best for leafy greens and herbs &mdash; fruiting crops are possible but more complex</li>
+            </ul>
+          </div>
 
-            <h2>Types of Systems</h2>
+          <nav class="page-toc page-toc-mobile" aria-label="On this page">
+            <div class="page-toc-title">On This Page</div>
+            <ol>
+              <li><a href="#overview">Overview</a></li>
+              <li><a href="#types-of-systems">Types of Systems</a></li>
+              <li><a href="#pros-cons">Pros &amp; Cons</a></li>
+              <li><a href="#cost-breakdown">Cost Breakdown</a></li>
+              <li><a href="#step-by-step-dwc-setup">Step-by-Step DWC Setup</a></li>
+              <li><a href="#ph-nutrient-management">pH &amp; Nutrient Management</a></li>
+              <li><a href="#best-crops">Best Crops</a></li>
+              <li><a href="#maintenance-schedule">Maintenance Schedule</a></li>
+              <li><a href="#common-problems">Common Problems &amp; Solutions</a></li>
+            </ol>
+          </nav>
+
+          <div class="prose">
+            <h2 id="overview">Overview</h2>
+            <p>Hydroponics grows plants without soil &mdash; nutrients dissolve directly in water and feed the roots. The simplest setup is a mason jar with a net pot, built in 10 minutes for under $5.</p>
+            <p>Roots don&rsquo;t waste energy searching through soil. They get everything instantly from the nutrient solution.</p>
+            <p>The result: <span class="key">30&ndash;50% faster growth</span> and the highest yields per square foot of any method. A 60-day soil crop matures in 40 days hydroponically.</p>
+            <p>The tradeoff is attention. Water has no buffer &mdash; if pH drifts or nutrients run out, plants feel it within hours.</p>
+
+            <details class="collapsible-section" open id="types-of-systems">
+              <summary>Types of Systems <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
             <dl class="problems-list">
               <div class="problem-item">
                 <dt>Kratky Method (passive, no pump)</dt>
-                <dd>The simplest hydroponic system and the best entry point for beginners. Plants sit in net pots suspended over a container of nutrient solution. As the plant drinks, the water level drops, exposing a growing air gap that provides oxygen to the roots. No pump, no electricity, no moving parts. You fill the reservoir once and the plant grows to harvest. Ideal for lettuce, herbs, and leafy greens. Start here if you have never grown hydroponically.</dd>
+                <dd><strong>Simplest entry point.</strong> No pump, no electricity &mdash; fill a jar with nutrient solution once and harvest later.</dd>
               </div>
               <div class="problem-item">
                 <dt>Deep Water Culture (DWC)</dt>
-                <dd>Plants sit in net pots over a reservoir of nutrient solution, just like Kratky, but an air pump and airstone continuously bubble oxygen into the water. This extra oxygen accelerates root growth and allows you to grow larger, more demanding plants like peppers and tomatoes. DWC is the most popular home hydroponic system because it is simple to build, inexpensive, and highly productive. This is the system to graduate to after Kratky.</dd>
+                <dd><strong>Most popular home system.</strong> Like Kratky plus an air pump for oxygen &mdash; handles peppers, tomatoes, and faster growth.</dd>
               </div>
               <div class="problem-item">
                 <dt>Nutrient Film Technique (NFT)</dt>
-                <dd>A thin film of nutrient solution flows continuously through a shallow channel past the plant roots. NFT systems are more complex to set up (you need a pump, tubing, and angled channels) but they are very water-efficient and scale well. Commercial lettuce farms use NFT. For home growers, NFT makes sense when you want to grow many plants (10+) in a small footprint. Not recommended as a first system.</dd>
+                <dd><strong>Best for scaling up.</strong> Nutrient solution flows through channels past roots &mdash; fits <span class="key">10+ plants</span> in a small footprint but not recommended as a first system.</dd>
               </div>
             </dl>
-            <p><strong>Where to start:</strong> If you are new to hydroponics, begin with Kratky. Grow one head of lettuce or a basil plant in a mason jar. Once you understand how nutrient solution, pH, and root growth work, build a DWC bucket system for more capacity and faster growth.</p>
+            <p><strong>Where to start:</strong> Begin with Kratky &mdash; one head of lettuce in a mason jar. Then build a DWC bucket for more capacity.</p>
+              </div>
+            </details>
 
-            <h2>Pros &amp; Cons</h2>
+            <details class="collapsible-section" id="pros-cons">
+              <summary>Pros &amp; Cons <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
             <div class="requirements-grid">
               <div class="requirement">
                 <span class="requirement-label">Pros</span>
@@ -160,45 +193,66 @@
                 <span class="requirement-value">Nutrient monitoring required</span>
               </div>
             </div>
+              </div>
+            </details>
 
-            <h2>Cost Breakdown</h2>
+            <details class="collapsible-section" id="cost-breakdown">
+              <summary>Cost Breakdown <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
             <dl class="problems-list">
               <div class="problem-item">
                 <dt>Basic Kratky setup</dt>
-                <dd>Mason jars or plastic containers: $5. Net pots (6-pack): $5. Hydroponic nutrients (quart concentrate): $12&ndash;15. Clay pebbles (grow media): $8. Total: <strong>around $30</strong> for a 3&ndash;6 plant setup that can produce lettuce and herbs indefinitely as you reuse containers.</dd>
+                <dd><strong>~<span class="key">$30</span> for 3&ndash;6 plants.</strong> Jars ($5), net pots ($5), nutrients ($12&ndash;15), clay pebbles ($8). Reuse everything indefinitely.</dd>
               </div>
               <div class="problem-item">
                 <dt>DWC single bucket</dt>
-                <dd>5-gallon bucket with lid: $5&ndash;8. Air pump: $15&ndash;20. Airstone and tubing: $5. Net pots and clay pebbles: $10. Hydroponic nutrients: $12&ndash;15. pH test kit and adjusters: $10&ndash;15. Total: <strong>$50&ndash;80</strong> for a single-bucket system that grows one large plant (pepper, tomato) or several smaller ones (herbs, lettuce).</dd>
+                <dd><strong>$50&ndash;80 total.</strong> Bucket ($5&ndash;8), air pump ($15&ndash;20), airstone ($5), media ($10), nutrients ($12&ndash;15), pH kit ($10&ndash;15). Grows one large plant or several herbs.</dd>
               </div>
               <div class="problem-item">
                 <dt>Multi-plant system</dt>
-                <dd>Multiple DWC buckets, a larger air pump, or a pre-built NFT channel system: <strong>$150&ndash;400</strong> depending on scale. Add $50&ndash;100 for a grow light if you are growing indoors without sufficient window light. An EC/PPM meter ($15&ndash;25) becomes essential at this level for precise nutrient management.</dd>
+                <dd><strong>$150&ndash;400 depending on scale.</strong> Add $50&ndash;100 for a grow light if indoors. An EC/PPM meter ($15&ndash;25) becomes essential at this level.</dd>
               </div>
             </dl>
+              </div>
+            </details>
 
-            <h2>Step-by-Step DWC Setup</h2>
-            <ol>
-              <li><strong>Get a 5-gallon bucket with lid.</strong> Food-grade buckets from hardware stores or bakeries work perfectly. Dark-colored buckets are better &mdash; light penetration encourages algae growth in the reservoir. If you have a light-colored bucket, wrap it in dark tape or paint the outside.</li>
-              <li><strong>Drill holes for net pots.</strong> Use a 3-inch hole saw to cut one to four holes in the lid, depending on how many plants you want. One hole for a single large plant (tomato, pepper) or three to four holes for herbs and lettuce. Sand the edges smooth.</li>
-              <li><strong>Install the air pump and airstone.</strong> Place the airstone at the bottom of the bucket. Run airline tubing up through a small hole in the lid to the air pump, which sits outside the bucket. The air pump must stay above the water level or have a check valve to prevent backflow if the power goes out.</li>
-              <li><strong>Mix nutrient solution to proper EC/PPM.</strong> Follow your nutrient brand&rsquo;s mixing instructions. For most leafy greens and herbs, target an EC of 1.0&ndash;1.6 (500&ndash;800 PPM). For fruiting plants like peppers, target EC 1.6&ndash;2.4 (800&ndash;1200 PPM). Start at the lower end &mdash; you can always add more nutrients, but you cannot remove them without a water change.</li>
-              <li><strong>Adjust pH to 5.5&ndash;6.5.</strong> Use a pH test kit (liquid drops or digital meter) to check the solution. Most tap water starts around pH 7.0&ndash;8.0. Add pH Down solution (phosphoric acid) a few drops at a time until you reach 5.8 &mdash; the sweet spot for most crops. Stir well and retest after each addition.</li>
-              <li><strong>Add seedlings in net pots with clay pebbles.</strong> Start seeds in rockwool cubes or directly transplant young seedlings. Rinse clay pebbles thoroughly before use. Place the seedling in the net pot, surround with clay pebbles to support it, and set the net pot in the lid hole. The bottom of the net pot should just touch or sit slightly above the water level &mdash; bubbles from the airstone will splash moisture up to the roots.</li>
-              <li><strong>Top off water as plants drink.</strong> As plants grow, they will consume water rapidly &mdash; a large tomato plant can drink over a gallon per day in peak production. Check the water level daily and top off with pH-adjusted water. Add nutrients at half strength when topping off to maintain concentration.</li>
+            <details class="collapsible-section" id="step-by-step-dwc-setup">
+              <summary>Step-by-Step DWC Setup <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
+            <ol class="steps-list">
+              <li><strong>Get a 5-gallon bucket with lid.</strong> Food-grade, dark-colored. Light buckets grow algae &mdash; wrap in dark tape if needed.</li>
+              <li><strong>Drill holes for net pots.</strong> Use a 3-inch hole saw. One hole for a large plant, 3&ndash;4 holes for herbs and lettuce.</li>
+              <li><strong>Install the air pump and airstone.</strong> Airstone goes in the bucket bottom. Pump stays outside, above water level or with a check valve.</li>
+              <li><strong>Mix nutrient solution.</strong> Greens: EC 1.0&ndash;1.6. Fruiting plants: EC 1.6&ndash;2.4. Start low &mdash; you can add more but can&rsquo;t remove.</li>
+              <li><strong>Adjust pH to <span class="key">5.8</span> (range 5.5&ndash;6.5).</strong> Add pH Down a few drops at a time. Stir and retest after each addition.</li>
+              <li><strong>Add seedlings in net pots with clay pebbles.</strong> Net pot bottom should just touch the water level. Airstone bubbles will splash moisture to the roots.</li>
+              <li><strong>Top off water daily.</strong> Large plants drink over a gallon per day at peak. Top off with pH-adjusted water at half-strength nutrients.</li>
             </ol>
+              </div>
+            </details>
 
-            <h2>pH &amp; Nutrient Management</h2>
-            <p>This is the skill that separates successful hydroponic growers from frustrated ones. Master pH and nutrients, and your plants will outperform any soil garden.</p>
+            <details class="collapsible-section" id="ph-nutrient-management">
+              <summary>pH &amp; Nutrient Management <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
+            <p>Master pH and nutrients, and your plants will outperform any soil garden.</p>
+
+            <div class="callout-box">
+              <p>Above <span class="key">pH 6.5</span>, nutrient lockout begins &mdash; micronutrients become unavailable even though they&rsquo;re in the water.</p>
+            </div>
+
             <ul>
-              <li><strong>Check pH every 2&ndash;3 days.</strong> Nutrient uptake changes the pH of the solution over time. Most plants push the pH up as they absorb nutrients. If pH drifts above 6.5, nutrient lockout begins &mdash; iron, manganese, and other micronutrients become unavailable even though they are present in the water. Keep a bottle of pH Down solution on hand and adjust in small increments.</li>
-              <li><strong>Target range: 5.5&ndash;6.5.</strong> The ideal is 5.8 for most crops. Slight fluctuation within the range is actually beneficial because different nutrients absorb best at slightly different pH levels. Aim for 5.8 and let it drift naturally to 6.2 before adjusting back down.</li>
-              <li><strong>EC/PPM monitoring.</strong> EC (electrical conductivity) or PPM (parts per million) tells you the nutrient strength of your solution. A rising EC means plants are drinking water faster than nutrients &mdash; dilute with plain water. A falling EC means plants are consuming nutrients faster than water &mdash; add more nutrients. An EC/PPM meter is a worthwhile $15&ndash;25 investment.</li>
-              <li><strong>Full reservoir change every 1&ndash;2 weeks.</strong> Dump the old solution, rinse the bucket, and mix a fresh batch. This prevents nutrient imbalances from accumulating. Use the old solution to water houseplants or outdoor gardens &mdash; it is still full of nutrients.</li>
+              <li><strong>Check pH every 2&ndash;3 days.</strong> Plants push pH up over time &mdash; keep pH Down on hand.</li>
+              <li><strong>Target range: 5.5&ndash;6.5.</strong> Aim for 5.8 and let it drift to 6.2 before adjusting back down.</li>
+              <li><strong>EC/PPM monitoring.</strong> Rising EC means dilute with water. Falling EC means add nutrients. A meter costs $15&ndash;25.</li>
+              <li><strong>Full reservoir change every 1&ndash;2 weeks.</strong> Dump, rinse, mix fresh. Water your houseplants with the old solution.</li>
             </ul>
+              </div>
+            </details>
 
-            <h2>Best Crops</h2>
-            <p>Hydroponics excels at fast-growing, leafy, and compact crops. Start with these proven winners:</p>
+            <details class="collapsible-section" id="best-crops">
+              <summary>Best Crops <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
+            <p>Hydroponics excels at fast-growing, compact crops. Start with these proven winners.</p>
             <div class="card-grid card-grid--3">
               <a href="/homeharvest/guides/herbs/" class="guide-card">
                 <h3 class="guide-title">Herbs</h3>
@@ -206,64 +260,93 @@
               </a>
               <a href="/homeharvest/guides/lettuce/" class="guide-card">
                 <h3 class="guide-title">Lettuce &amp; Greens</h3>
-                <p class="guide-desc">The quintessential hydroponic crop. Harvest in 30 days from seed.</p>
+                <p class="guide-desc">The quintessential hydroponic crop. Harvest in <span class="key">30 days</span> from seed.</p>
               </a>
               <a href="/homeharvest/guides/peppers/" class="guide-card">
                 <h3 class="guide-title">Peppers</h3>
                 <p class="guide-desc">Excellent in DWC. Compact varieties produce heavily indoors year-round.</p>
               </a>
             </div>
-            <p>Tomatoes are possible but advanced &mdash; they need large reservoirs, heavy nutrient loads, strong lighting, and support structures. Attempt tomatoes only after you have successfully grown herbs and lettuce hydroponically.</p>
+            <p>Tomatoes are possible but advanced. Attempt only after you&rsquo;ve successfully grown herbs and lettuce.</p>
+              </div>
+            </details>
 
-            <h2>Maintenance Schedule</h2>
+            <details class="collapsible-section" id="maintenance-schedule">
+              <summary>Maintenance Schedule <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
             <dl class="problems-list">
               <div class="problem-item">
                 <dt>Daily</dt>
-                <dd>Check the water level in each reservoir. Large plants can drink a gallon or more per day. If the water level drops below the airstone, roots dry out and the plant stresses within hours. Top off with pH-adjusted water.</dd>
+                <dd><strong>Check water level.</strong> Large plants drink <span class="key">1+ gallon per day</span>. Top off with pH-adjusted water.</dd>
               </div>
               <div class="problem-item">
                 <dt>Every 2&ndash;3 days</dt>
-                <dd>Test pH and adjust to 5.5&ndash;6.5. Check EC/PPM if you have a meter. Observe root color through the net pot &mdash; healthy roots are white or slightly tan. Brown, slimy roots indicate a problem.</dd>
+                <dd><strong>Test pH</strong> and adjust to 5.5&ndash;6.5. Check root color &mdash; white is healthy, brown/slimy means trouble.</dd>
               </div>
               <div class="problem-item">
                 <dt>Weekly</dt>
-                <dd>Inspect roots more thoroughly. Lift net pots and check for discoloration, slime, or foul odor. Check that the air pump is running and the airstone is producing a steady stream of bubbles. A clogged airstone reduces oxygen and invites root rot.</dd>
+                <dd><strong>Inspect roots and airstone.</strong> Lift net pots &mdash; look for slime or foul odor. Confirm airstone is bubbling steadily.</dd>
               </div>
               <div class="problem-item">
                 <dt>Every 1&ndash;2 weeks</dt>
-                <dd>Perform a full reservoir change. Dump the old solution, wipe down the inside of the bucket, rinse the airstone in clean water, and mix a completely fresh nutrient batch. This prevents salt buildup and nutrient imbalances that accumulate over time.</dd>
+                <dd><strong>Full reservoir change.</strong> Dump, wipe bucket, rinse airstone, mix fresh nutrients. Prevents salt buildup.</dd>
               </div>
             </dl>
+              </div>
+            </details>
 
-            <h2>Common Problems &amp; Solutions</h2>
+            <details class="collapsible-section" id="common-problems">
+              <summary>Common Problems &amp; Solutions <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
+
+            <div class="callout-box">
+              <p>Most hydroponic problems trace back to one thing: <span class="key">pH outside 5.5&ndash;6.5</span>.</p>
+            </div>
+
             <dl class="problems-list">
               <div class="problem-item">
                 <dt>pH drift</dt>
-                <dd>The most common hydroponic issue. pH naturally rises as plants absorb nutrients. Check every 2&ndash;3 days and adjust with pH Down. If pH swings wildly, your reservoir may be too small for the plant &mdash; upgrade to a larger bucket. Larger water volumes change pH more slowly.</dd>
+                <dd><strong>Most common issue.</strong> Check every 2&ndash;3 days and adjust with pH Down &mdash; wild swings mean your reservoir is too small.</dd>
               </div>
               <div class="problem-item">
                 <dt>Root rot</dt>
-                <dd>Brown, slimy roots with a foul smell. Caused by low oxygen (failed air pump or clogged airstone), high water temperature (above 72&deg;F / 22&deg;C), or pathogen contamination. Fix immediately: replace the airstone, ensure the pump is working, add a small amount of hydrogen peroxide (3% solution, 3 ml per gallon) to the reservoir to kill pathogens, and keep the reservoir in a cool location. Prevention is key &mdash; never let water temperature exceed 72&deg;F.</dd>
+                <dd><strong>Brown, slimy roots with foul smell.</strong> Fix: replace airstone, add hydrogen peroxide (3 ml/gal), and keep water below 72&deg;F.</dd>
               </div>
               <div class="problem-item">
                 <dt>Algae growth</dt>
-                <dd>Green slime on the reservoir walls or growing media. Algae grows wherever light reaches nutrient-rich water. Block all light from the reservoir &mdash; use opaque buckets, cover any gaps in the lid with tape, and avoid clear tubing. Algae is unsightly and competes for nutrients but is rarely fatal to plants. Prevent it from the start by keeping the system light-tight.</dd>
+                <dd><strong>Green slime where light hits nutrient water.</strong> Block all light with opaque buckets and tape &mdash; not fatal but competes for nutrients.</dd>
               </div>
               <div class="problem-item">
                 <dt>Nutrient lockout</dt>
-                <dd>Plants show deficiency symptoms (yellowing, purpling, stunted growth) even though nutrients are in the water. This is almost always a pH problem &mdash; when pH drifts outside 5.5&ndash;6.5, certain nutrients become chemically unavailable to roots. Fix the pH first. If symptoms persist, do a full reservoir change with fresh solution mixed to proper pH and EC.</dd>
+                <dd><strong>Deficiency symptoms despite nutrients in the water.</strong> Almost always a pH problem &mdash; fix pH first, then do a full reservoir change if needed.</dd>
               </div>
               <div class="problem-item">
                 <dt>Pump failure</dt>
-                <dd>If the air pump fails in a DWC system, roots lose their oxygen supply within hours. Keep a spare air pump on hand &mdash; they are inexpensive. If a pump fails and you cannot replace it immediately, convert temporarily to Kratky method by lowering the water level to expose the top third of the roots to air. This buys you time until the new pump arrives.</dd>
+                <dd><strong>Roots lose oxygen within hours.</strong> Keep a spare pump &mdash; or lower water to expose roots as a temporary Kratky conversion.</dd>
               </div>
             </dl>
+              </div>
+            </details>
           </div>
         </div>
 
         <!-- Desktop sidebar (sticky) -->
         <aside class="detail-sidebar">
           <div class="detail-sidebar-sticky">
+            <nav class="page-toc page-toc-desktop" aria-label="On this page">
+              <div class="page-toc-title">On This Page</div>
+              <ol>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#types-of-systems">Types of Systems</a></li>
+                <li><a href="#pros-cons">Pros &amp; Cons</a></li>
+                <li><a href="#cost-breakdown">Cost Breakdown</a></li>
+                <li><a href="#step-by-step-dwc-setup">Step-by-Step DWC Setup</a></li>
+                <li><a href="#ph-nutrient-management">pH &amp; Nutrient Management</a></li>
+                <li><a href="#best-crops">Best Crops</a></li>
+                <li><a href="#maintenance-schedule">Maintenance Schedule</a></li>
+                <li><a href="#common-problems">Common Problems &amp; Solutions</a></li>
+              </ol>
+            </nav>
             <div class="sidebar-card">
               <h2 class="sidebar-title">Quick Reference</h2>
               <div class="sidebar-stats">

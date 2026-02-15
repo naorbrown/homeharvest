@@ -1404,15 +1404,26 @@ a.system-card {
 
 /* --- Prose Content --- */
 .prose h2 {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.375rem;
+  font-weight: 700;
   color: var(--color-dark-text);
-  margin-top: 2.5rem;
-  margin-bottom: 0.75rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(48, 56, 48, 0.4);
+  scroll-margin-top: 5rem;
 }
 
 .prose h2:first-child {
   margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+@media (min-width: 640px) {
+  .prose h2 {
+    font-size: 1.5rem;
+  }
 }
 
 .prose h3 {
@@ -1426,26 +1437,36 @@ a.system-card {
 .prose p {
   font-size: 0.9375rem;
   color: rgba(228, 232, 227, 0.7);
-  line-height: 1.7;
-  margin-bottom: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.875rem;
+  max-width: 55ch;
 }
 
 .prose ol,
 .prose ul {
   padding-left: 1.25rem;
   margin-bottom: 1.25rem;
+  max-width: 55ch;
 }
 
 .prose li {
   font-size: 0.9375rem;
   color: rgba(228, 232, 227, 0.7);
-  line-height: 1.7;
+  line-height: 1.6;
   margin-bottom: 0.5rem;
 }
 
 .prose strong {
   color: var(--color-dark-text);
   font-weight: 600;
+}
+
+.prose .key {
+  background-color: rgba(90, 143, 90, 0.12);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  color: var(--color-primary-light);
+  font-weight: 500;
 }
 
 /* --- Requirements Grid --- */
@@ -1509,6 +1530,7 @@ a.system-card {
   font-size: 0.8125rem;
   color: rgba(228, 232, 227, 0.65);
   line-height: 1.55;
+  max-width: 55ch;
 }
 
 /* --- Related Section --- */
@@ -1523,6 +1545,269 @@ a.system-card {
   font-weight: 700;
   color: var(--color-dark-text);
   margin-bottom: 1.5rem;
+}
+
+/* --- TL;DR Summary Box --- */
+.tldr-box {
+  background-color: var(--color-dark-surface);
+  border-left: 3px solid var(--color-primary-light);
+  border-radius: 0 0.75rem 0.75rem 0;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-card), 0 0 12px rgba(90, 143, 90, 0.08);
+}
+
+.tldr-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-primary-light);
+  margin-bottom: 0.5rem;
+}
+
+.tldr-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.tldr-box li {
+  font-size: 1rem;
+  color: var(--color-dark-text);
+  font-weight: 500;
+  line-height: 1.5;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.tldr-box li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+/* --- On-Page Table of Contents --- */
+.page-toc {
+  background-color: var(--color-dark-surface);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-card);
+}
+
+.page-toc-title {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(228, 232, 227, 0.4);
+  margin-bottom: 0.75rem;
+}
+
+.page-toc ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.page-toc a {
+  display: block;
+  padding: 0.375rem 0.625rem;
+  border-radius: 0.375rem;
+  font-size: 0.8125rem;
+  color: rgba(228, 232, 227, 0.6);
+  text-decoration: none;
+  transition: all 0.2s;
+  border-left: 2px solid transparent;
+}
+
+.page-toc a:hover {
+  color: var(--color-dark-text);
+  background-color: rgba(48, 56, 48, 0.3);
+}
+
+.page-toc a.toc-active {
+  color: var(--color-primary-light);
+  border-left-color: var(--color-primary);
+  background-color: rgba(90, 143, 90, 0.06);
+}
+
+.page-toc-mobile {
+  display: block;
+}
+
+.page-toc-desktop {
+  display: none;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .page-toc-mobile {
+    display: none;
+  }
+
+  .page-toc-desktop {
+    display: block;
+  }
+}
+
+/* --- Reading Progress Bar --- */
+.reading-progress {
+  position: fixed;
+  top: 3.5rem;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  z-index: 39;
+  pointer-events: none;
+}
+
+@media (min-width: 640px) {
+  .reading-progress {
+    top: 4rem;
+  }
+}
+
+.reading-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  border-radius: 0 2px 2px 0;
+  transition: width 0.1s linear;
+}
+
+/* --- Callout / Key Insight Box --- */
+.callout {
+  background-color: rgba(90, 143, 90, 0.06);
+  border: 1px solid rgba(90, 143, 90, 0.15);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0 1.25rem;
+  font-size: 0.9375rem;
+  color: var(--color-dark-text);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* --- Step Cards (Ordered Lists) --- */
+.steps-list {
+  list-style: none;
+  padding: 0;
+  counter-reset: step-counter;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.steps-list > li {
+  counter-increment: step-counter;
+  background-color: var(--color-dark-surface);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  padding-left: 3.25rem;
+  position: relative;
+  font-size: 0.875rem;
+  color: rgba(228, 232, 227, 0.7);
+  line-height: 1.6;
+  box-shadow: var(--shadow-card);
+}
+
+.steps-list > li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background-color: rgba(90, 143, 90, 0.1);
+  border: 1.5px solid rgba(90, 143, 90, 0.25);
+  color: var(--color-primary-light);
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.steps-list > li strong {
+  display: block;
+  color: var(--color-dark-text);
+  font-weight: 600;
+  margin-bottom: 0.375rem;
+}
+
+/* --- Collapsible Sections --- */
+.collapsible-section {
+  border-top: 1px solid rgba(48, 56, 48, 0.4);
+  margin-top: 2.5rem;
+}
+
+.collapsible-section summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  list-style: none;
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--color-dark-text);
+  padding: 1.5rem 0 0.75rem;
+  user-select: none;
+  scroll-margin-top: 5rem;
+}
+
+.collapsible-section summary::-webkit-details-marker {
+  display: none;
+}
+
+.collapsible-section summary::marker {
+  display: none;
+  content: '';
+}
+
+.collapsible-section summary .chevron-icon {
+  flex-shrink: 0;
+  transition: transform 0.2s;
+  color: rgba(228, 232, 227, 0.35);
+}
+
+.collapsible-section[open] summary .chevron-icon {
+  transform: rotate(180deg);
+}
+
+.collapsible-section .section-content {
+  transition: max-height 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  .collapsible-section summary {
+    font-size: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collapsible-section .section-content {
+    transition: none;
+  }
+
+  .collapsible-section summary .chevron-icon {
+    transition: none;
+  }
 }
 
 /* --- Animations --- */
