@@ -59,6 +59,8 @@
   </dialog>
   <!-- HEADER:END -->
 
+  <div class="reading-progress" aria-hidden="true"><div class="reading-progress-bar"></div></div>
+
   <main>
     <article class="detail-article">
       <nav aria-label="Breadcrumb" class="breadcrumb">
@@ -102,17 +104,41 @@
             </div>
           </div>
 
-          <div class="prose">
-            <h2>Overview</h2>
-            <p>Soil beds are the foundation of home food production. Whether you dig directly into the ground or build a raised frame and fill it with soil, you are working with the simplest and most forgiving growing system available. Soil beds leverage billions of microorganisms that naturally cycle nutrients, retain moisture, and support root health &mdash; a living ecosystem that no other system can replicate.</p>
-            <p>There are two primary types, and the right choice depends on your yard and your body:</p>
+          <div class="tldr-box">
+            <div class="tldr-label">TL;DR</div>
             <ul>
-              <li><strong>In-ground beds</strong> &mdash; You remove the existing turf, amend the native soil with compost, and plant directly. This is the cheapest possible option. It works best when your native soil is already reasonably fertile (dark, crumbly, drains within a few hours after rain). In-ground beds have effectively unlimited root depth, which matters for deep-rooted crops like tomatoes and carrots.</li>
-              <li><strong>Raised beds</strong> &mdash; You build a frame (usually lumber, but cinder blocks, galvanized steel, or even stacked logs work) and fill it with a controlled soil mix. Raised beds are better when your native soil is compacted clay, contaminated, rocky, or poorly drained. They also reduce bending and kneeling, which matters more than most beginners expect after a full season of weeding.</li>
+              <li>Lowest cost, simplest maintenance, and highest long-term yield of any growing system</li>
+              <li>Raised beds solve drainage and soil quality problems instantly</li>
+              <li>Build or buy a frame, fill with quality soil mix, and start planting</li>
             </ul>
-            <p>Choose in-ground if you have decent soil and want to minimize cost. Choose raised beds if you want guaranteed soil quality, better drainage, and a defined growing area that stays neat.</p>
+          </div>
 
-            <h2>Pros &amp; Cons</h2>
+          <nav class="page-toc page-toc-mobile" aria-label="On this page">
+            <div class="page-toc-title">On This Page</div>
+            <ol>
+              <li><a href="#overview">Overview</a></li>
+              <li><a href="#pros-cons">Pros &amp; Cons</a></li>
+              <li><a href="#cost-breakdown">Cost Breakdown</a></li>
+              <li><a href="#step-by-step-setup">Step-by-Step Setup Guide</a></li>
+              <li><a href="#best-crops">Best Crops</a></li>
+              <li><a href="#maintenance-schedule">Maintenance Schedule</a></li>
+              <li><a href="#common-problems">Common Problems &amp; Solutions</a></li>
+            </ol>
+          </nav>
+
+          <div class="prose">
+            <h2 id="overview">Overview</h2>
+            <p>Soil beds are the simplest and most forgiving growing system. <span class="key">Billions of microorganisms</span> naturally cycle nutrients, retain moisture, and support root health.</p>
+            <p>Two types. The right choice depends on your yard and your body:</p>
+            <ul>
+              <li><strong>In-ground beds</strong> &mdash; Remove turf, amend with compost, plant directly. Cheapest option with unlimited root depth.</li>
+              <li><strong>Raised beds</strong> &mdash; Build a frame and fill with controlled soil mix. Best when native soil is clay, contaminated, or poorly drained.</li>
+            </ul>
+            <p>Choose in-ground for decent soil and low cost. Choose raised for guaranteed quality and better drainage.</p>
+
+            <details class="collapsible-section" open id="pros-cons">
+              <summary>Pros &amp; Cons <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
             <div class="requirements-grid">
               <div class="requirement">
                 <span class="requirement-label">Pros</span>
@@ -147,35 +173,52 @@
                 <span class="requirement-value">More pest access</span>
               </div>
             </div>
+              </div>
+            </details>
 
-            <h2>Cost Breakdown</h2>
-            <p>Soil beds are the most affordable growing system. Here is what to expect:</p>
+            <details class="collapsible-section" id="cost-breakdown">
+              <summary>Cost Breakdown <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
+            <p>The most affordable growing system. Here is what to expect:</p>
             <dl class="problems-list">
               <div class="problem-item">
                 <dt>In-ground bed</dt>
-                <dd>Nearly free if your existing soil is decent. Budget about $30 for a bag of compost to amend the top 6 inches, and $15 for a seed variety pack. Total: <strong>$45 or less</strong>. If your soil is poor, add $20&ndash;30 for additional amendments like peat moss or vermiculite.</dd>
+                <dd>Nearly free with decent soil. Compost + seeds = <span class="key"><strong>$45 or less</strong></span>.</dd>
               </div>
               <div class="problem-item">
                 <dt>Raised bed (4&times;8 ft)</dt>
-                <dd>Lumber (untreated pine or cedar 2&times;10 boards): $40&ndash;80. Deck screws and corner brackets: $15. Soil and compost fill (approximately 20 cubic feet): $40&ndash;60. Optional hardware cloth lining for burrowing pests: $10&ndash;15. Total: <strong>$100&ndash;150</strong> for a single 4&times;8 bed that will last 5&ndash;10 years.</dd>
+                <dd>Lumber, hardware, and soil fill totals <strong>$100&ndash;150</strong>. Lasts 5&ndash;10 years.</dd>
               </div>
             </dl>
-            <p>Raised bed costs drop significantly for the second and third bed because you already have tools and leftover hardware. Many growers start with one bed and expand each season.</p>
+            <p>Costs drop for the second bed since you already have tools. Start with one and expand each season.</p>
+              </div>
+            </details>
 
-            <h2>Step-by-Step Setup Guide</h2>
-            <ol>
-              <li><strong>Test your soil.</strong> Buy a home soil test kit ($10&ndash;15 at any garden center). You are checking pH (target 6.0&ndash;7.0 for most vegetables) and basic nutrient levels (nitrogen, phosphorus, potassium). This tells you what amendments to add. Skip this step at your own risk &mdash; planting into unknown soil leads to disappointing first harvests.</li>
-              <li><strong>Choose the sunniest location.</strong> Walk your yard at 9 AM, noon, and 3 PM on a clear day. Note which areas get direct sun at all three times. Vegetables need a minimum of 6 hours of direct sunlight, and 8 hours is significantly better. Avoid spots near large trees &mdash; they compete for water and nutrients through root spread.</li>
-              <li><strong>Mark your bed dimensions.</strong> A 4&times;8 foot bed is the most common and practical size. You can reach the center from either side without stepping on the soil (critical &mdash; compaction from foot traffic ruins soil structure). Use stakes and string to mark the outline.</li>
-              <li><strong>For raised beds: cut lumber and assemble the frame.</strong> Cut four boards to length (two at 8 feet, two at 4 feet for a 4&times;8 bed). Drill pilot holes and join corners with 3-inch deck screws or corner brackets. Use untreated lumber &mdash; pressure-treated wood contains chemicals that can leach into soil. Cedar naturally resists rot and lasts longest.</li>
-              <li><strong>Level the ground.</strong> Place your frame and check with a level. Dig out high spots and fill low spots. A bed that is not level will pool water at one end and stay dry at the other. This step takes 15 minutes and prevents ongoing drainage problems.</li>
-              <li><strong>Line with hardware cloth (optional but recommended).</strong> Staple &frac14;-inch hardware cloth to the bottom of the frame to prevent moles, voles, and gophers from tunneling up into your bed. This is cheap insurance in any area with burrowing pests.</li>
-              <li><strong>Fill with soil mix.</strong> For raised beds, use a mix of 60% topsoil, 30% compost, and 10% perlite or coarse vermiculite. This gives you fertility, organic matter, and drainage in one blend. Fill to within 1&ndash;2 inches of the top &mdash; soil will settle over the first few weeks.</li>
-              <li><strong>For in-ground beds: remove sod, double-dig, and amend.</strong> Cut existing grass with a flat spade and remove sod in strips. Then double-dig: loosen the first 12 inches of soil with a garden fork, remove it, loosen the next 12 inches below, then replace the top layer mixed with 3&ndash;4 inches of compost. This creates 24 inches of loose, aerated soil that roots will thrive in.</li>
+            <details class="collapsible-section" id="step-by-step-setup">
+              <summary>Step-by-Step Setup Guide <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
+
+            <div class="callout-box">
+              <p>Soil is a living ecosystem of microorganisms that no other system can replicate.</p>
+            </div>
+
+            <ol class="steps-list">
+              <li><strong>Test your soil.</strong> A <span class="key">$10&ndash;15 home test kit</span> checks pH (target 6.0&ndash;7.0) and nutrient levels. Skipping this leads to disappointing first harvests.</li>
+              <li><strong>Choose the sunniest location.</strong> Vegetables need at least 6 hours of direct sun; 8 is better. Avoid spots near large trees.</li>
+              <li><strong>Mark your bed dimensions.</strong> A 4&times;8 ft bed is ideal. You can reach the center from either side without stepping on the soil.</li>
+              <li><strong>Assemble the frame (raised beds).</strong> Join untreated lumber with deck screws or corner brackets. Use cedar for the longest life.</li>
+              <li><strong>Level the ground.</strong> Takes 15 minutes and prevents pooling water at one end.</li>
+              <li><strong>Line with hardware cloth.</strong> Staple &frac14;-inch cloth to the bottom to block burrowing pests.</li>
+              <li><strong>Fill with soil mix.</strong> Use 60% topsoil, 30% compost, 10% perlite. Fill to within 1&ndash;2 inches of the top.</li>
+              <li><strong>In-ground: remove sod and double-dig.</strong> Loosen 24 inches of soil and mix the top layer with 3&ndash;4 inches of compost.</li>
             </ol>
+              </div>
+            </details>
 
-            <h2>Best Crops</h2>
-            <p>Soil beds can grow everything. The deep root space and natural soil ecosystem support the full range of home food crops. Here are your best starting points:</p>
+            <details class="collapsible-section" id="best-crops">
+              <summary>Best Crops <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
+            <p>Soil beds grow <span class="key">the full range of home food crops</span>. Best starting points:</p>
             <div class="card-grid card-grid--3">
               <a href="/homeharvest/guides/herbs/" class="guide-card">
                 <h3 class="guide-title">Herbs</h3>
@@ -202,56 +245,83 @@
                 <p class="guide-desc">Carrots, radishes, beets. The deep loose soil of beds is ideal.</p>
               </a>
             </div>
+              </div>
+            </details>
 
-            <h2>Maintenance Schedule</h2>
+            <details class="collapsible-section" id="maintenance-schedule">
+              <summary>Maintenance Schedule <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
             <dl class="problems-list">
               <div class="problem-item">
                 <dt>Weekly</dt>
-                <dd>Water deeply (1 inch per week from rain or hose). Weed by hand &mdash; pull weeds when small before they set seed. Walk the bed perimeter and check for pest damage: chewed leaves, holes, or discolored foliage.</dd>
+                <dd>Water deeply (<span class="key">1 inch per week</span>). Pull weeds while small and check for pest damage.</dd>
               </div>
               <div class="problem-item">
                 <dt>Monthly</dt>
-                <dd>Side-dress actively growing plants with a 1-inch ring of compost or apply a balanced organic granular fertilizer around the base of each plant. This replaces nutrients that heavy feeders like tomatoes and squash pull from the soil.</dd>
+                <dd>Side-dress plants with a 1-inch ring of compost or organic fertilizer.</dd>
               </div>
               <div class="problem-item">
                 <dt>Seasonally</dt>
-                <dd>Add 2&ndash;3 inches of organic mulch (straw, shredded leaves, or wood chips) around plants. Mulch suppresses weeds, retains moisture, and regulates soil temperature. At the end of each growing season, rotate crop families to different bed positions to prevent disease buildup.</dd>
+                <dd>Add 2&ndash;3 inches of mulch around plants. Rotate crop families at season end.</dd>
               </div>
               <div class="problem-item">
                 <dt>Annually</dt>
-                <dd>Top-dress the entire bed with 1&ndash;2 inches of finished compost in early spring. Re-test your soil pH and nutrients every 1&ndash;2 years to catch imbalances before they affect your crops.</dd>
+                <dd>Top-dress with 1&ndash;2 inches of compost in early spring. Re-test soil every 1&ndash;2 years.</dd>
               </div>
             </dl>
+              </div>
+            </details>
 
-            <h2>Common Problems &amp; Solutions</h2>
+            <details class="collapsible-section" id="common-problems">
+              <summary>Common Problems &amp; Solutions <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
+
+            <div class="callout-box">
+              <p>Never walk on your growing beds &mdash; foot traffic crushes the air pockets roots need.</p>
+            </div>
+
             <dl class="problems-list">
               <div class="problem-item">
                 <dt>Compacted soil</dt>
-                <dd>Never walk on your growing beds. Foot traffic crushes the air pockets that roots need. If your bed is wider than 4 feet, lay a board across it to distribute your weight when you must reach the center. For in-ground beds, use permanent pathways between rows.</dd>
+                <dd>Never step on beds. Lay a board across to distribute weight if you must reach the center.</dd>
               </div>
               <div class="problem-item">
                 <dt>Poor drainage</dt>
-                <dd>If water pools on the surface for more than a few hours after rain, your soil has too much clay or your bed is in a low spot. The fix: build raised beds. Even 6 inches of elevation dramatically improves drainage. Mix in coarse perlite or sand to open up heavy soil.</dd>
+                <dd>Water pooling for hours means too much clay. Even <span class="key">6 inches of elevation</span> via raised beds fixes this.</dd>
               </div>
               <div class="problem-item">
                 <dt>Nutrient depletion</dt>
-                <dd>Crops extract nutrients every season. If plants are pale green, stunted, or producing poorly, the soil is running out of fuel. Rotate crop families annually (don&rsquo;t plant tomatoes in the same spot two years running) and amend with compost and organic fertilizer each season.</dd>
+                <dd>Pale, stunted plants signal spent soil. Rotate crop families annually and amend with compost each season.</dd>
               </div>
               <div class="problem-item">
                 <dt>Weeds</dt>
-                <dd>Mulch heavily &mdash; 3 inches of straw or shredded leaves blocks most weed seeds from germinating. Pull any weeds that do emerge when they are small. Never let weeds go to seed in your bed, or you will fight ten times more next season.</dd>
+                <dd>3 inches of mulch blocks most weed seeds. Pull survivors while small &mdash; never let them go to seed.</dd>
               </div>
               <div class="problem-item">
                 <dt>Grubs and soil pests</dt>
-                <dd>White grubs (beetle larvae) eat roots below the surface. If plants wilt despite adequate water, dig around the base and look for C-shaped white larvae. Apply beneficial nematodes (available at garden centers) as a biological control. For raised beds, hardware cloth on the bottom prevents burrowing pests from entering.</dd>
+                <dd>Plants wilting despite water? Check for C-shaped white larvae at the roots. Apply beneficial nematodes as biological control.</dd>
               </div>
             </dl>
+              </div>
+            </details>
           </div>
         </div>
 
         <!-- Desktop sidebar (sticky) -->
         <aside class="detail-sidebar">
           <div class="detail-sidebar-sticky">
+            <nav class="page-toc page-toc-desktop" aria-label="On this page">
+              <div class="page-toc-title">On This Page</div>
+              <ol>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#pros-cons">Pros &amp; Cons</a></li>
+                <li><a href="#cost-breakdown">Cost Breakdown</a></li>
+                <li><a href="#step-by-step-setup">Step-by-Step Setup Guide</a></li>
+                <li><a href="#best-crops">Best Crops</a></li>
+                <li><a href="#maintenance-schedule">Maintenance Schedule</a></li>
+                <li><a href="#common-problems">Common Problems &amp; Solutions</a></li>
+              </ol>
+            </nav>
             <div class="sidebar-card">
               <h2 class="sidebar-title">Quick Reference</h2>
               <div class="sidebar-stats">

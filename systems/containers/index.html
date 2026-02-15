@@ -59,6 +59,8 @@
   </dialog>
   <!-- HEADER:END -->
 
+  <div class="reading-progress" aria-hidden="true"><div class="reading-progress-bar"></div></div>
+
   <main>
     <article class="detail-article">
       <nav aria-label="Breadcrumb" class="breadcrumb">
@@ -102,37 +104,68 @@
             </div>
           </div>
 
-          <div class="prose">
-            <h2>Overview</h2>
-            <p>Container gardening is growing food in any portable vessel that holds soil and allows drainage. That includes traditional terra cotta pots, plastic nursery containers, fabric grow bags, repurposed 5-gallon buckets, window boxes, and even large food-grade cans with holes punched in the bottom. If it holds soil and drains water, it is a container garden.</p>
-            <p>This is the universal starting point for home food growing. You do not need a yard, a balcony, or even a patio. A single pot on a windowsill counts. Container gardening works on apartment fire escapes, rooftops, front stoops, driveways, inside near a window, and anywhere else you can place a pot in sunlight. The portability is the superpower &mdash; you can move containers to chase the sun, bring them inside before frost, or rearrange your layout as you learn what works.</p>
-            <p>The main tradeoff compared to soil beds is capacity. Containers hold less soil, which means less root space, less moisture reserve, and less nutrient buffer. You water more often, feed more often, and harvest less per plant. But the barrier to entry is nearly zero, and many growers who start with a single pot on a windowsill end up with a balcony full of productive containers within a season.</p>
+          <div class="tldr-box">
+            <div class="tldr-label">TL;DR</div>
+            <ul>
+              <li>Drainage holes are non-negotiable &mdash; no holes means dead plants</li>
+              <li>Fabric grow bags are the best value &mdash; lightweight, breathable, and cheap</li>
+              <li>Size up when in doubt &mdash; a bigger container means less watering and bigger harvests</li>
+            </ul>
+          </div>
 
-            <h2>Container Types</h2>
+          <nav class="page-toc page-toc-mobile" aria-label="On this page">
+            <div class="page-toc-title">On This Page</div>
+            <ol>
+              <li><a href="#overview">Overview</a></li>
+              <li><a href="#container-types">Container Types</a></li>
+              <li><a href="#pros-cons">Pros &amp; Cons</a></li>
+              <li><a href="#sizing-guide">Sizing Guide</a></li>
+              <li><a href="#cost-breakdown">Cost Breakdown</a></li>
+              <li><a href="#step-by-step-setup">Step-by-Step Setup</a></li>
+              <li><a href="#drainage-watering">Drainage &amp; Watering</a></li>
+              <li><a href="#best-crops">Best Crops</a></li>
+              <li><a href="#common-problems">Common Problems &amp; Solutions</a></li>
+            </ol>
+          </nav>
+
+          <div class="prose">
+            <h2 id="overview">Overview</h2>
+            <p>Container gardening is growing food in any vessel that holds soil and drains water. Pots, grow bags, buckets, window boxes &mdash; <span class="key">if it drains, it counts</span>.</p>
+            <p>You do not need a yard. A single pot on a windowsill is enough.</p>
+            <p>Containers work on fire escapes, rooftops, stoops, driveways, and indoors near a window. Portability is the superpower &mdash; chase the sun, dodge frost, rearrange anytime.</p>
+            <p>The tradeoff is capacity: less soil means more frequent watering and feeding. But the barrier to entry is near zero, and one pot often becomes a full balcony within a season.</p>
+
+            <details class="collapsible-section" open id="container-types">
+              <summary>Container Types <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
             <dl class="problems-list">
               <div class="problem-item">
                 <dt>Terra cotta pots</dt>
-                <dd>Classic unglazed clay pots. Terra cotta is porous, which means it breathes &mdash; air and moisture pass through the walls, keeping roots well-oxygenated and reducing the risk of root rot. The downside is that they dry out faster than plastic (the porosity works both ways), they are heavy, and they crack if dropped or left outside in freezing temperatures. Best for herbs and plants that prefer drier roots like rosemary and thyme.</dd>
+                <dd>Porous clay that breathes, keeping roots oxygenated and reducing rot risk. Dries out fast, heavy, and cracks in freezing temps &mdash; best for herbs like rosemary and thyme.</dd>
               </div>
               <div class="problem-item">
                 <dt>Plastic pots</dt>
-                <dd>Lightweight, cheap, widely available, and retain moisture better than terra cotta. Plastic pots do not breathe, so water stays in the soil longer &mdash; good for thirsty plants like lettuce, bad for overwatering-prone beginners. They are inexpensive ($2&ndash;5 each) and practically unbreakable. Look for pots with multiple drainage holes in the bottom.</dd>
+                <dd>Lightweight, cheap ($2&ndash;5), and retain moisture longer than clay. Look for multiple drainage holes in the bottom.</dd>
               </div>
               <div class="problem-item">
                 <dt>Fabric grow bags</dt>
-                <dd>Made from breathable geotextile fabric, grow bags provide excellent drainage and air-prune roots. When roots hit the fabric wall, the air exposure causes the root tip to stop elongating and branch instead, creating a dense, fibrous root system that absorbs nutrients more efficiently. Grow bags fold flat for storage, are extremely lightweight, and are available in sizes from 1 gallon to 100+ gallons. A 5-pack of 5-gallon grow bags costs $8&ndash;15 and is one of the best values in container gardening.</dd>
+                <dd>Breathable fabric that air-prunes roots, creating denser root systems. <span class="key">A 5-pack of 5-gallon bags costs $8&ndash;15</span> &mdash; the best value in container gardening.</dd>
               </div>
               <div class="problem-item">
                 <dt>5-gallon buckets</dt>
-                <dd>The workhorse of budget container gardening. Food-grade 5-gallon buckets are available free from bakeries and restaurants (ask for old frosting or pickle buckets) or for $3&ndash;5 at hardware stores. Drill five to six &frac14;-inch drainage holes in the bottom and you have a container large enough for a full-sized tomato, pepper, or eggplant. Not the prettiest option, but the most productive per dollar spent.</dd>
+                <dd>Free from bakeries (ask for old frosting buckets) or $3&ndash;5 at hardware stores. Drill 5&ndash;6 holes in the bottom and grow full-sized tomatoes, peppers, or eggplant.</dd>
               </div>
               <div class="problem-item">
                 <dt>Window boxes</dt>
-                <dd>Long, narrow planters that mount on railings, windowsills, or hang from brackets. Window boxes are ideal for herbs, lettuce, and trailing plants like strawberries. Their narrow profile means limited soil depth (usually 6&ndash;8 inches), so stick to shallow-rooted crops. They are the best option for growing directly outside a kitchen window for daily snip-and-cook convenience.</dd>
+                <dd>Long planters for railings and windowsills &mdash; ideal for herbs, lettuce, and strawberries. Limited to 6&ndash;8 inches of soil depth, so stick to shallow-rooted crops.</dd>
               </div>
             </dl>
+              </div>
+            </details>
 
-            <h2>Pros &amp; Cons</h2>
+            <details class="collapsible-section" id="pros-cons">
+              <summary>Pros &amp; Cons <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
             <div class="requirements-grid">
               <div class="requirement">
                 <span class="requirement-label">Pros</span>
@@ -167,8 +200,12 @@
                 <span class="requirement-value">Heavy when filled with wet soil</span>
               </div>
             </div>
+              </div>
+            </details>
 
-            <h2>Sizing Guide</h2>
+            <details class="collapsible-section" id="sizing-guide">
+              <summary>Sizing Guide <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
             <div class="requirements-grid">
               <div class="requirement">
                 <span class="requirement-label">Herbs</span>
@@ -191,51 +228,77 @@
                 <span class="requirement-value">12+ inches deep</span>
               </div>
             </div>
-            <p>When in doubt, go bigger. A larger container holds more soil, which holds more moisture and nutrients, which means less frequent watering and healthier plants. The only downside of a too-large container is that it takes more soil to fill and is heavier to move.</p>
+            <p>When in doubt, <span class="key">go bigger</span>. More soil means more moisture, less watering, and healthier plants.</p>
+              </div>
+            </details>
 
-            <h2>Cost Breakdown</h2>
+            <details class="collapsible-section" id="cost-breakdown">
+              <summary>Cost Breakdown <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
             <dl class="problems-list">
               <div class="problem-item">
                 <dt>Repurposed containers</dt>
-                <dd>Old buckets, large yogurt tubs, food-grade cans, or plastic storage bins with drainage holes drilled in the bottom. Cost: <strong>nearly free</strong>. This is the true zero-budget entry point. Every container needs drainage &mdash; drill &frac14;-inch holes if there are none.</dd>
+                <dd>Old buckets, yogurt tubs, or storage bins with holes drilled in the bottom. Cost: <strong>nearly free</strong>.</dd>
               </div>
               <div class="problem-item">
                 <dt>Basic plastic pots</dt>
-                <dd>Standard nursery pots or decorative plastic containers from garden centers: <strong>$2&ndash;5 each</strong>. Buy three or four in different sizes to start a small container garden for under $20.</dd>
+                <dd>Standard nursery pots from garden centers: <strong>$2&ndash;5 each</strong>. Three or four gets you started for under $20.</dd>
               </div>
               <div class="problem-item">
                 <dt>Fabric grow bags</dt>
-                <dd>5-pack of 5-gallon grow bags: <strong>$8&ndash;15</strong>. This is the best value in container gardening &mdash; five full-sized growing containers for the price of one nice terra cotta pot.</dd>
+                <dd>5-pack of 5-gallon grow bags: <strong>$8&ndash;15</strong>. Five full-sized containers for the price of one terra cotta pot.</dd>
               </div>
               <div class="problem-item">
                 <dt>Quality potting mix</dt>
-                <dd>A bag of potting mix (1&ndash;2 cubic feet): <strong>$10&ndash;15</strong>. This is enough to fill several small pots or one large container. Never skip on soil quality &mdash; cheap potting mix compacts, drains poorly, and holds too much water.</dd>
+                <dd>A bag (1&ndash;2 cu ft): <strong>$10&ndash;15</strong>. Enough for several small pots or one large container.</dd>
               </div>
             </dl>
 
-            <h2>Step-by-Step Setup</h2>
-            <ol>
-              <li><strong>Select containers with drainage holes (or drill them).</strong> This is non-negotiable. Without drainage, water pools at the bottom and roots rot. Every container needs at least one hole in the bottom. For buckets, drill five to six &frac14;-inch holes evenly spaced across the bottom. For repurposed containers, use a nail and hammer if you do not have a drill.</li>
-              <li><strong>Choose the appropriate size for your planned crops.</strong> Match the container to the plant: 6&ndash;8 inch pots for herbs, 5-gallon containers for tomatoes and peppers. Undersized containers stress plants, reduce yields, and require more frequent watering. Check the sizing guide above and err on the side of larger.</li>
-              <li><strong>Fill with quality potting mix.</strong> Use a commercial indoor or container potting mix. Never use garden soil from your yard &mdash; it is too dense for containers, drains poorly, compacts over time, and often contains weed seeds, pathogens, and insects. Good potting mix is light, fluffy, and contains perlite or vermiculite for drainage. Fill to 1 inch below the rim to leave room for watering.</li>
-              <li><strong>Plant seeds or transplant starts.</strong> For seeds, follow the depth instructions on the packet (usually 2&ndash;3 times the seed diameter). For transplants, dig a hole the size of the root ball, set the plant at the same depth it was growing, firm the soil gently around it, and water immediately. Avoid burying the stem deeper than it was in the original pot (exception: tomatoes benefit from deep planting).</li>
-              <li><strong>Water thoroughly until it drains from the bottom.</strong> After planting, water slowly and evenly until you see water flowing from the drainage holes. This settles the soil around roots and ensures the entire root zone is moist. If water runs through too quickly, the potting mix may be too dry &mdash; water again and let it absorb.</li>
-              <li><strong>Position for maximum light.</strong> Place containers where they will receive the most direct sunlight, at minimum 6 hours per day. South-facing locations are ideal in the northern hemisphere. If growing indoors, a south-facing window or a basic LED grow light works. Group containers together to create a microclimate that retains moisture slightly longer.</li>
-              <li><strong>Set saucers underneath.</strong> Place a saucer or drip tray under each container to catch drainage water and protect surfaces below (balcony floors, window sills, tables). Empty saucers after watering &mdash; do not let pots sit in standing water for more than 30 minutes, or roots will suffocate.</li>
+            <div class="callout-box">
+              <p><span class="key">Total startup cost: $10&ndash;30</span> for containers and soil to grow your first food.</p>
+            </div>
+
+              </div>
+            </details>
+
+            <details class="collapsible-section" id="step-by-step-setup">
+              <summary>Step-by-Step Setup <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
+            <ol class="steps-list">
+              <li><strong>Ensure drainage holes.</strong> <span class="key">No holes = dead plants.</span> For buckets, drill 5&ndash;6 quarter-inch holes in the bottom.</li>
+              <li><strong>Match container to crop.</strong> 6&ndash;8 inch pots for herbs, 5-gallon for tomatoes and peppers. When unsure, size up.</li>
+              <li><strong>Fill with potting mix.</strong> Use commercial potting mix, never garden soil. Fill to 1 inch below the rim.</li>
+              <li><strong>Plant seeds or transplants.</strong> Follow packet depth for seeds. For transplants, match the original soil line and water immediately.</li>
+              <li><strong>Water until it drains.</strong> Water slowly until it flows from the bottom holes. This settles soil around roots.</li>
+              <li><strong>Maximize light.</strong> Aim for 6+ hours of direct sun daily. South-facing spots are ideal; LED grow lights work indoors.</li>
+              <li><strong>Add saucers.</strong> Catch runoff and protect surfaces. Empty them within 30 minutes so roots do not sit in water.</li>
             </ol>
+              </div>
+            </details>
 
-            <h2>Drainage &amp; Watering</h2>
-            <p>The number one mistake in container gardening is improper drainage, and it kills more plants than any pest or disease:</p>
+            <details class="collapsible-section" id="drainage-watering">
+              <summary>Drainage &amp; Watering <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
+            <p>Improper drainage is the #1 killer in container gardening.</p>
+
+            <div class="callout-box">
+              <p><span class="key">No drainage holes = dead plants.</span> Waterlogged roots rot and no amount of watering saves them.</p>
+            </div>
+
             <ul>
-              <li><strong>No drainage holes = dead plants.</strong> Roots sitting in waterlogged soil cannot breathe. Without oxygen, they rot, the plant wilts, and no amount of watering saves it. Always drill holes if your container does not have them.</li>
-              <li><strong>Check soil moisture daily.</strong> Stick your finger 1 inch into the soil. If it is dry at that depth, water thoroughly. If it is still moist, wait another day. This is more reliable than any schedule because drying rate depends on weather, container size, plant size, and container material.</li>
-              <li><strong>Containers dry faster than beds.</strong> A 6-inch pot in direct sun can dry out in a single day during summer. Larger containers and fabric grow bags dry slightly slower, but all containers need more frequent watering than in-ground gardens. If you are watering daily and plants still wilt, the container may be too small.</li>
-              <li><strong>Self-watering containers reduce frequency.</strong> These have a built-in reservoir at the bottom that wicks water up to the roots as needed. They are excellent for busy growers or vacation periods. You can buy self-watering inserts or build them from two nested buckets.</li>
-              <li><strong>Bottom-watering prevents soil compaction.</strong> Instead of pouring water on top of the soil, set the container in a basin of water and let it absorb from the bottom up for 20&ndash;30 minutes. This draws water through the entire soil column without disturbing the surface, prevents compaction, and ensures even moisture. Especially useful for seedlings and small herbs.</li>
+              <li><strong>Drill holes if there are none.</strong> Every container needs at least one drainage hole in the bottom.</li>
+              <li><strong>Check moisture daily.</strong> Finger 1 inch into soil &mdash; dry means water, moist means wait.</li>
+              <li><strong>Containers dry fast.</strong> A 6-inch pot in summer sun can dry out in a single day. If you water daily and plants still wilt, size up.</li>
+              <li><strong>Self-watering containers help.</strong> Built-in reservoirs wick water to roots. Great for busy schedules or vacations.</li>
+              <li><strong>Try bottom-watering.</strong> Set the pot in a basin of water for 20&ndash;30 minutes. Prevents compaction and ensures even moisture.</li>
             </ul>
+              </div>
+            </details>
 
-            <h2>Best Crops</h2>
-            <p>Containers support a wide range of crops. Match the container size to the plant, and nearly anything is possible:</p>
+            <details class="collapsible-section" id="best-crops">
+              <summary>Best Crops <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
+            <p>Match container size to the plant and <span class="key">nearly anything grows in a container</span>.</p>
             <div class="card-grid card-grid--3">
               <a href="/homeharvest/guides/herbs/" class="guide-card">
                 <h3 class="guide-title">Herbs</h3>
@@ -258,32 +321,52 @@
                 <p class="guide-desc">Grow in any shallow tray. Ready in 7&ndash;14 days. The ultimate container crop.</p>
               </a>
             </div>
+              </div>
+            </details>
 
-            <h2>Common Problems &amp; Solutions</h2>
+            <details class="collapsible-section" id="common-problems">
+              <summary>Common Problems &amp; Solutions <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+              <div class="section-content">
             <dl class="problems-list">
               <div class="problem-item">
                 <dt>Root-bound plants</dt>
-                <dd>When roots circle the inside of the container and form a dense mat, the plant is root-bound. Growth slows, the plant wilts quickly between waterings, and roots may grow out of drainage holes. The fix: transplant into a container one size larger. Gently loosen the root ball before repotting &mdash; tease apart circling roots so they grow outward into the new soil instead of continuing to circle.</dd>
+                <dd>Roots circling the pot and growing out of drainage holes. <span class="key">Fix: move to a container one size larger</span> and loosen the root ball before repotting.</dd>
               </div>
               <div class="problem-item">
                 <dt>Salt buildup from fertilizer</dt>
-                <dd>White crusty deposits on the soil surface or the outside of terra cotta pots indicate mineral salt buildup from fertilizer. Over time, excess salts can damage roots and reduce nutrient uptake. Flush each container with plain water once a month &mdash; water heavily until it runs freely from the drainage holes for several minutes. This washes accumulated salts out of the soil.</dd>
+                <dd>White crust on soil or pot walls means mineral salt buildup. Flush each container with plain water once a month until it runs freely from the bottom.</dd>
               </div>
               <div class="problem-item">
                 <dt>Containers overheating in direct sun</dt>
-                <dd>Dark-colored containers absorb heat and can cook roots on hot summer days. Soil temperatures above 95&deg;F stress most vegetable plants. Use light-colored pots, wrap dark containers with reflective material, or double-pot (place the grow container inside a slightly larger container with an air gap for insulation). Fabric grow bags handle heat better than plastic because evaporation through the fabric walls cools the soil.</dd>
+                <dd>Dark pots absorb heat and can cook roots above 95&deg;F. Use light-colored pots, double-pot with an air gap, or switch to fabric grow bags.</dd>
               </div>
               <div class="problem-item">
                 <dt>Fungus gnats</dt>
-                <dd>Tiny black flies hovering around the soil surface. Fungus gnats lay eggs in consistently moist soil &mdash; their larvae feed on organic matter and fine roots near the surface. The fix: let the top inch of soil dry completely between waterings (gnat larvae cannot survive in dry conditions). For severe infestations, apply a thin layer of sand on the soil surface to prevent egg-laying, or water with a diluted hydrogen peroxide solution (1 part 3% hydrogen peroxide to 4 parts water) to kill larvae in the soil.</dd>
+                <dd>Tiny black flies near the soil surface that breed in consistently moist soil. Let the top inch dry fully between waterings &mdash; larvae cannot survive dry conditions.</dd>
               </div>
             </dl>
+              </div>
+            </details>
           </div>
         </div>
 
         <!-- Desktop sidebar (sticky) -->
         <aside class="detail-sidebar">
           <div class="detail-sidebar-sticky">
+            <nav class="page-toc page-toc-desktop" aria-label="On this page">
+              <div class="page-toc-title">On This Page</div>
+              <ol>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#container-types">Container Types</a></li>
+                <li><a href="#pros-cons">Pros &amp; Cons</a></li>
+                <li><a href="#sizing-guide">Sizing Guide</a></li>
+                <li><a href="#cost-breakdown">Cost Breakdown</a></li>
+                <li><a href="#step-by-step-setup">Step-by-Step Setup</a></li>
+                <li><a href="#drainage-watering">Drainage &amp; Watering</a></li>
+                <li><a href="#best-crops">Best Crops</a></li>
+                <li><a href="#common-problems">Common Problems &amp; Solutions</a></li>
+              </ol>
+            </nav>
             <div class="sidebar-card">
               <h2 class="sidebar-title">Quick Reference</h2>
               <div class="sidebar-stats">
