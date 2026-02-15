@@ -2,6 +2,8 @@
 
 **Grow Food. Grow Freedom.**
 
+**[Live Site](https://naorbrown.github.io/homeharvest/)**
+
 A clean, minimalist educational website empowering individuals to grow their own food at home — balcony, rooftop, backyard, or indoors.
 
 Part of the brand suite alongside [The Clean Pantry](https://naorbrown.github.io/the-clean-pantry/), [Plant Therapy](https://naorbrown.github.io/plant-therapy/), and [Clean Snacks](https://naorbrown.github.io/clean-snacks/).
