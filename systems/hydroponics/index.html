@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Complete guide to hydroponic growing at home. Soilless systems from beginner Kratky to DWC — the fastest path to year-round indoor food production.">
+  <title>Hydroponics — Home Harvest</title>
+
+  <meta property="og:title" content="Hydroponics — Home Harvest">
+  <meta property="og:description" content="Soilless growing in nutrient-rich water. Fastest path to year-round production.">
+  <meta property="og:image" content="https://naorbrown.github.io/homeharvest/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://naorbrown.github.io/homeharvest/systems/hydroponics/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/homeharvest/css/styles.css">
+  <link rel="icon" href="/homeharvest/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- HEADER:START -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/homeharvest/" class="logo" aria-label="Home Harvest — home">
+        <svg class="logo-svg" width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M16 20v-8"/><path d="M16 16c-3-1-5-4-4-7 3 1 5 4 4 7z" fill="rgba(90,143,90,0.15)"/><path d="M16 13c3-1 5-4 4-7-3 1-5 4-4 7z" fill="rgba(90,143,90,0.15)"/><rect x="7" y="20" width="18" height="4" rx="1"/>
+        </svg>
+        <span class="logo-text">Home Harvest</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/homeharvest/spaces/">Spaces</a></li>
+          <li><a href="/homeharvest/guides/">Guides</a></li>
+          <li><a href="/homeharvest/systems/">Systems</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="mobile-menu-btn" aria-label="Open menu" onclick="document.getElementById('mobile-nav').showModal()">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/></svg>
+      </button>
+    </div>
+  </header>
+  <dialog id="mobile-nav" class="mobile-nav" aria-label="Navigation menu">
+    <div class="mobile-nav-content">
+      <button type="button" class="mobile-nav-close" aria-label="Close menu" onclick="document.getElementById('mobile-nav').close()">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="4" y1="4" x2="14" y2="14"/><line x1="14" y1="4" x2="4" y2="14"/></svg>
+      </button>
+      <ul class="mobile-nav-links">
+        <li><a href="/homeharvest/">Home</a></li>
+        <li><a href="/homeharvest/spaces/" onclick="document.getElementById('mobile-nav').close()">Spaces</a></li>
+        <li><a href="/homeharvest/guides/" onclick="document.getElementById('mobile-nav').close()">Guides</a></li>
+        <li><a href="/homeharvest/systems/" onclick="document.getElementById('mobile-nav').close()">Systems</a></li>
+      </ul>
+    </div>
+  </dialog>
+  <!-- HEADER:END -->
+
+  <main>
+    <article class="detail-article">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <ol>
+          <li><a href="/homeharvest/">Home</a></li>
+          <li><span aria-hidden="true">/</span> <a href="/homeharvest/systems/">Systems</a></li>
+          <li><span aria-hidden="true">/</span> Hydroponics</li>
+        </ol>
+      </nav>
+
+      <div class="detail-header">
+        <div class="detail-category-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4"/></svg>
+          <a href="/homeharvest/systems/">Growing Systems</a>
+        </div>
+        <h1>Hydroponics</h1>
+        <p class="detail-subtitle">Soilless growing in nutrient-rich water. Higher setup cost, highest yields per square foot. The fastest path to year-round indoor production.</p>
+        <div class="detail-meta">
+          <span class="badge badge--hard">High Complexity</span>
+          <span>Cost $100&ndash;400</span>
+          <span>Highest yield</span>
+          <span>Best for indoor</span>
+        </div>
+      </div>
+
+      <div class="detail-layout">
+        <div class="detail-content">
+
+          <!-- Mobile sidebar (inline) -->
+          <div class="detail-sidebar-mobile">
+            <div class="sidebar-card">
+              <h2 class="sidebar-title">Quick Reference</h2>
+              <div class="sidebar-stats">
+                <div class="sidebar-stat"><span>Cost</span><span>$100&ndash;400</span></div>
+                <div class="sidebar-stat"><span>Complexity</span><span>High</span></div>
+                <div class="sidebar-stat"><span>Yield</span><span>Highest</span></div>
+                <div class="sidebar-stat"><span>Best For</span><span>Indoor</span></div>
+                <div class="sidebar-stat"><span>Maintenance</span><span>Daily</span></div>
+                <div class="sidebar-stat"><span>Best Crops</span><span>Lettuce / herbs / peppers</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="prose">
+            <h2>Overview</h2>
+            <p>Hydroponics is growing plants without soil by delivering dissolved nutrients directly to the roots through water. It sounds high-tech, but the simplest hydroponic setup is a mason jar with a net pot and some nutrient solution &mdash; something you can build in 10 minutes for under $5.</p>
+            <p>The reason hydroponics works so well is root efficiency. In soil, roots spend energy searching through particles for water and nutrients. In hydroponics, roots sit in or near a nutrient solution that gives them everything they need immediately. The result is 30&ndash;50% faster growth and significantly higher yields per square foot compared to soil. Plants that take 60 days in soil can mature in 40 days hydroponically.</p>
+            <p>The tradeoff is attention. Soil is forgiving &mdash; it buffers pH swings, holds moisture, and releases nutrients slowly. Water has no buffer. If the pH drifts or nutrients run out, plants feel it within hours, not days. Hydroponics rewards growers who check their systems regularly and enjoy the precision of dialing in nutrient levels.</p>
+
+            <h2>Types of Systems</h2>
+            <dl class="problems-list">
+              <div class="problem-item">
+                <dt>Kratky Method (passive, no pump)</dt>
+                <dd>The simplest hydroponic system and the best entry point for beginners. Plants sit in net pots suspended over a container of nutrient solution. As the plant drinks, the water level drops, exposing a growing air gap that provides oxygen to the roots. No pump, no electricity, no moving parts. You fill the reservoir once and the plant grows to harvest. Ideal for lettuce, herbs, and leafy greens. Start here if you have never grown hydroponically.</dd>
+              </div>
+              <div class="problem-item">
+                <dt>Deep Water Culture (DWC)</dt>
+                <dd>Plants sit in net pots over a reservoir of nutrient solution, just like Kratky, but an air pump and airstone continuously bubble oxygen into the water. This extra oxygen accelerates root growth and allows you to grow larger, more demanding plants like peppers and tomatoes. DWC is the most popular home hydroponic system because it is simple to build, inexpensive, and highly productive. This is the system to graduate to after Kratky.</dd>
+              </div>
+              <div class="problem-item">
+                <dt>Nutrient Film Technique (NFT)</dt>
+                <dd>A thin film of nutrient solution flows continuously through a shallow channel past the plant roots. NFT systems are more complex to set up (you need a pump, tubing, and angled channels) but they are very water-efficient and scale well. Commercial lettuce farms use NFT. For home growers, NFT makes sense when you want to grow many plants (10+) in a small footprint. Not recommended as a first system.</dd>
+              </div>
+            </dl>
+            <p><strong>Where to start:</strong> If you are new to hydroponics, begin with Kratky. Grow one head of lettuce or a basil plant in a mason jar. Once you understand how nutrient solution, pH, and root growth work, build a DWC bucket system for more capacity and faster growth.</p>
+
+            <h2>Pros &amp; Cons</h2>
+            <div class="requirements-grid">
+              <div class="requirement">
+                <span class="requirement-label">Pros</span>
+                <span class="requirement-value">30&ndash;50% faster growth</span>
+              </div>
+              <div class="requirement">
+                <span class="requirement-label">&nbsp;</span>
+                <span class="requirement-value">No soil pests or diseases</span>
+              </div>
+              <div class="requirement">
+                <span class="requirement-label">&nbsp;</span>
+                <span class="requirement-value">Year-round indoor production</span>
+              </div>
+              <div class="requirement">
+                <span class="requirement-label">&nbsp;</span>
+                <span class="requirement-value">Extremely water efficient</span>
+              </div>
+              <div class="requirement">
+                <span class="requirement-label">Cons</span>
+                <span class="requirement-value">Higher upfront cost</span>
+              </div>
+              <div class="requirement">
+                <span class="requirement-label">&nbsp;</span>
+                <span class="requirement-value">Steeper learning curve</span>
+              </div>
+              <div class="requirement">
+                <span class="requirement-label">&nbsp;</span>
+                <span class="requirement-value">Power dependency (pumps, lights)</span>
+              </div>
+              <div class="requirement">
+                <span class="requirement-label">&nbsp;</span>
+                <span class="requirement-value">Nutrient monitoring required</span>
+              </div>
+            </div>
+
+            <h2>Cost Breakdown</h2>
+            <dl class="problems-list">
+              <div class="problem-item">
+                <dt>Basic Kratky setup</dt>
+                <dd>Mason jars or plastic containers: $5. Net pots (6-pack): $5. Hydroponic nutrients (quart concentrate): $12&ndash;15. Clay pebbles (grow media): $8. Total: <strong>around $30</strong> for a 3&ndash;6 plant setup that can produce lettuce and herbs indefinitely as you reuse containers.</dd>
+              </div>
+              <div class="problem-item">
+                <dt>DWC single bucket</dt>
+                <dd>5-gallon bucket with lid: $5&ndash;8. Air pump: $15&ndash;20. Airstone and tubing: $5. Net pots and clay pebbles: $10. Hydroponic nutrients: $12&ndash;15. pH test kit and adjusters: $10&ndash;15. Total: <strong>$50&ndash;80</strong> for a single-bucket system that grows one large plant (pepper, tomato) or several smaller ones (herbs, lettuce).</dd>
+              </div>
+              <div class="problem-item">
+                <dt>Multi-plant system</dt>
+                <dd>Multiple DWC buckets, a larger air pump, or a pre-built NFT channel system: <strong>$150&ndash;400</strong> depending on scale. Add $50&ndash;100 for a grow light if you are growing indoors without sufficient window light. An EC/PPM meter ($15&ndash;25) becomes essential at this level for precise nutrient management.</dd>
+              </div>
+            </dl>
+
+            <h2>Step-by-Step DWC Setup</h2>
+            <ol>
+              <li><strong>Get a 5-gallon bucket with lid.</strong> Food-grade buckets from hardware stores or bakeries work perfectly. Dark-colored buckets are better &mdash; light penetration encourages algae growth in the reservoir. If you have a light-colored bucket, wrap it in dark tape or paint the outside.</li>
+              <li><strong>Drill holes for net pots.</strong> Use a 3-inch hole saw to cut one to four holes in the lid, depending on how many plants you want. One hole for a single large plant (tomato, pepper) or three to four holes for herbs and lettuce. Sand the edges smooth.</li>
+              <li><strong>Install the air pump and airstone.</strong> Place the airstone at the bottom of the bucket. Run airline tubing up through a small hole in the lid to the air pump, which sits outside the bucket. The air pump must stay above the water level or have a check valve to prevent backflow if the power goes out.</li>
+              <li><strong>Mix nutrient solution to proper EC/PPM.</strong> Follow your nutrient brand&rsquo;s mixing instructions. For most leafy greens and herbs, target an EC of 1.0&ndash;1.6 (500&ndash;800 PPM). For fruiting plants like peppers, target EC 1.6&ndash;2.4 (800&ndash;1200 PPM). Start at the lower end &mdash; you can always add more nutrients, but you cannot remove them without a water change.</li>
+              <li><strong>Adjust pH to 5.5&ndash;6.5.</strong> Use a pH test kit (liquid drops or digital meter) to check the solution. Most tap water starts around pH 7.0&ndash;8.0. Add pH Down solution (phosphoric acid) a few drops at a time until you reach 5.8 &mdash; the sweet spot for most crops. Stir well and retest after each addition.</li>
+              <li><strong>Add seedlings in net pots with clay pebbles.</strong> Start seeds in rockwool cubes or directly transplant young seedlings. Rinse clay pebbles thoroughly before use. Place the seedling in the net pot, surround with clay pebbles to support it, and set the net pot in the lid hole. The bottom of the net pot should just touch or sit slightly above the water level &mdash; bubbles from the airstone will splash moisture up to the roots.</li>
+              <li><strong>Top off water as plants drink.</strong> As plants grow, they will consume water rapidly &mdash; a large tomato plant can drink over a gallon per day in peak production. Check the water level daily and top off with pH-adjusted water. Add nutrients at half strength when topping off to maintain concentration.</li>
+            </ol>
+
+            <h2>pH &amp; Nutrient Management</h2>
+            <p>This is the skill that separates successful hydroponic growers from frustrated ones. Master pH and nutrients, and your plants will outperform any soil garden.</p>
+            <ul>
+              <li><strong>Check pH every 2&ndash;3 days.</strong> Nutrient uptake changes the pH of the solution over time. Most plants push the pH up as they absorb nutrients. If pH drifts above 6.5, nutrient lockout begins &mdash; iron, manganese, and other micronutrients become unavailable even though they are present in the water. Keep a bottle of pH Down solution on hand and adjust in small increments.</li>
+              <li><strong>Target range: 5.5&ndash;6.5.</strong> The ideal is 5.8 for most crops. Slight fluctuation within the range is actually beneficial because different nutrients absorb best at slightly different pH levels. Aim for 5.8 and let it drift naturally to 6.2 before adjusting back down.</li>
+              <li><strong>EC/PPM monitoring.</strong> EC (electrical conductivity) or PPM (parts per million) tells you the nutrient strength of your solution. A rising EC means plants are drinking water faster than nutrients &mdash; dilute with plain water. A falling EC means plants are consuming nutrients faster than water &mdash; add more nutrients. An EC/PPM meter is a worthwhile $15&ndash;25 investment.</li>
+              <li><strong>Full reservoir change every 1&ndash;2 weeks.</strong> Dump the old solution, rinse the bucket, and mix a fresh batch. This prevents nutrient imbalances from accumulating. Use the old solution to water houseplants or outdoor gardens &mdash; it is still full of nutrients.</li>
+            </ul>
+
+            <h2>Best Crops</h2>
+            <p>Hydroponics excels at fast-growing, leafy, and compact crops. Start with these proven winners:</p>
+            <div class="card-grid card-grid--3">
+              <a href="/homeharvest/guides/herbs/" class="guide-card">
+                <h3 class="guide-title">Herbs</h3>
+                <p class="guide-desc">Basil grows explosively in DWC. Mint, cilantro, and parsley thrive in Kratky jars.</p>
+              </a>
+              <a href="/homeharvest/guides/lettuce/" class="guide-card">
+                <h3 class="guide-title">Lettuce &amp; Greens</h3>
+                <p class="guide-desc">The quintessential hydroponic crop. Harvest in 30 days from seed.</p>
+              </a>
+              <a href="/homeharvest/guides/peppers/" class="guide-card">
+                <h3 class="guide-title">Peppers</h3>
+                <p class="guide-desc">Excellent in DWC. Compact varieties produce heavily indoors year-round.</p>
+              </a>
+            </div>
+            <p>Tomatoes are possible but advanced &mdash; they need large reservoirs, heavy nutrient loads, strong lighting, and support structures. Attempt tomatoes only after you have successfully grown herbs and lettuce hydroponically.</p>
+
+            <h2>Maintenance Schedule</h2>
+            <dl class="problems-list">
+              <div class="problem-item">
+                <dt>Daily</dt>
+                <dd>Check the water level in each reservoir. Large plants can drink a gallon or more per day. If the water level drops below the airstone, roots dry out and the plant stresses within hours. Top off with pH-adjusted water.</dd>
+              </div>
+              <div class="problem-item">
+                <dt>Every 2&ndash;3 days</dt>
+                <dd>Test pH and adjust to 5.5&ndash;6.5. Check EC/PPM if you have a meter. Observe root color through the net pot &mdash; healthy roots are white or slightly tan. Brown, slimy roots indicate a problem.</dd>
+              </div>
+              <div class="problem-item">
+                <dt>Weekly</dt>
+                <dd>Inspect roots more thoroughly. Lift net pots and check for discoloration, slime, or foul odor. Check that the air pump is running and the airstone is producing a steady stream of bubbles. A clogged airstone reduces oxygen and invites root rot.</dd>
+              </div>
+              <div class="problem-item">
+                <dt>Every 1&ndash;2 weeks</dt>
+                <dd>Perform a full reservoir change. Dump the old solution, wipe down the inside of the bucket, rinse the airstone in clean water, and mix a completely fresh nutrient batch. This prevents salt buildup and nutrient imbalances that accumulate over time.</dd>
+              </div>
+            </dl>
+
+            <h2>Common Problems &amp; Solutions</h2>
+            <dl class="problems-list">
+              <div class="problem-item">
+                <dt>pH drift</dt>
+                <dd>The most common hydroponic issue. pH naturally rises as plants absorb nutrients. Check every 2&ndash;3 days and adjust with pH Down. If pH swings wildly, your reservoir may be too small for the plant &mdash; upgrade to a larger bucket. Larger water volumes change pH more slowly.</dd>
+              </div>
+              <div class="problem-item">
+                <dt>Root rot</dt>
+                <dd>Brown, slimy roots with a foul smell. Caused by low oxygen (failed air pump or clogged airstone), high water temperature (above 72&deg;F / 22&deg;C), or pathogen contamination. Fix immediately: replace the airstone, ensure the pump is working, add a small amount of hydrogen peroxide (3% solution, 3 ml per gallon) to the reservoir to kill pathogens, and keep the reservoir in a cool location. Prevention is key &mdash; never let water temperature exceed 72&deg;F.</dd>
+              </div>
+              <div class="problem-item">
+                <dt>Algae growth</dt>
+                <dd>Green slime on the reservoir walls or growing media. Algae grows wherever light reaches nutrient-rich water. Block all light from the reservoir &mdash; use opaque buckets, cover any gaps in the lid with tape, and avoid clear tubing. Algae is unsightly and competes for nutrients but is rarely fatal to plants. Prevent it from the start by keeping the system light-tight.</dd>
+              </div>
+              <div class="problem-item">
+                <dt>Nutrient lockout</dt>
+                <dd>Plants show deficiency symptoms (yellowing, purpling, stunted growth) even though nutrients are in the water. This is almost always a pH problem &mdash; when pH drifts outside 5.5&ndash;6.5, certain nutrients become chemically unavailable to roots. Fix the pH first. If symptoms persist, do a full reservoir change with fresh solution mixed to proper pH and EC.</dd>
+              </div>
+              <div class="problem-item">
+                <dt>Pump failure</dt>
+                <dd>If the air pump fails in a DWC system, roots lose their oxygen supply within hours. Keep a spare air pump on hand &mdash; they are inexpensive. If a pump fails and you cannot replace it immediately, convert temporarily to Kratky method by lowering the water level to expose the top third of the roots to air. This buys you time until the new pump arrives.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <!-- Desktop sidebar (sticky) -->
+        <aside class="detail-sidebar">
+          <div class="detail-sidebar-sticky">
+            <div class="sidebar-card">
+              <h2 class="sidebar-title">Quick Reference</h2>
+              <div class="sidebar-stats">
+                <div class="sidebar-stat"><span>Cost</span><span>$100&ndash;400</span></div>
+                <div class="sidebar-stat"><span>Complexity</span><span>High</span></div>
+                <div class="sidebar-stat"><span>Yield</span><span>Highest</span></div>
+                <div class="sidebar-stat"><span>Best For</span><span>Indoor</span></div>
+                <div class="sidebar-stat"><span>Maintenance</span><span>Daily</span></div>
+                <div class="sidebar-stat"><span>Best Crops</span><span>Lettuce / herbs / peppers</span></div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Related content -->
+      <section class="related-section">
+        <h2>More Growing Systems</h2>
+        <div class="card-grid card-grid--3">
+          <a href="/homeharvest/systems/containers/" class="system-card">
+            <h3 class="system-title">Container Gardening</h3>
+            <p class="system-desc">Pots, grow bags, and buckets. The lowest barrier to entry &mdash; grow anywhere.</p>
+          </a>
+          <a href="/homeharvest/systems/vertical-towers/" class="system-card">
+            <h3 class="system-title">Vertical Towers</h3>
+            <p class="system-desc">Stacked growing systems that turn 2 sq ft into 20+ planting sites.</p>
+          </a>
+          <a href="/homeharvest/systems/soil-beds/" class="system-card">
+            <h3 class="system-title">Soil Beds</h3>
+            <p class="system-desc">In-ground plots and raised beds. Lowest cost, simplest, highest long-term yield.</p>
+          </a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- FOOTER:START -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/homeharvest/" class="logo" aria-label="Home Harvest — home">
+            <svg class="logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-8"/><path d="M16 16c-3-1-5-4-4-7 3 1 5 4 4 7z" fill="rgba(90,143,90,0.15)"/><path d="M16 13c3-1 5-4 4-7-3 1-5 4-4 7z" fill="rgba(90,143,90,0.15)"/><rect x="7" y="20" width="18" height="4" rx="1"/></svg>
+            <span class="logo-text logo-text--visible">Home Harvest</span>
+          </a>
+          <p>Practical guides for growing food at home. Any space. Any level.</p>
+        </div>
+        <div>
+          <h3 class="footer-heading">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="/homeharvest/spaces/">Growing Spaces</a></li>
+            <li><a href="/homeharvest/guides/">Crop Guides</a></li>
+            <li><a href="/homeharvest/systems/">Growing Systems</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Popular Guides</h3>
+          <ul class="footer-links">
+            <li><a href="/homeharvest/guides/herbs/">Herbs</a></li>
+            <li><a href="/homeharvest/guides/tomatoes/">Tomatoes</a></li>
+            <li><a href="/homeharvest/guides/microgreens/">Microgreens</a></li>
+            <li><a href="/homeharvest/guides/lettuce/">Lettuce</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Suite</h3>
+          <ul class="footer-links">
+            <li><a href="https://naorbrown.github.io/the-clean-pantry/">The Clean Pantry</a></li>
+            <li><a href="https://naorbrown.github.io/plant-therapy/">Plant Therapy</a></li>
+            <li><a href="https://naorbrown.github.io/clean-snacks/">Clean Snacks</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 Home Harvest. Grow food at home.</div>
+    </div>
+  </footer>
+  <!-- FOOTER:END -->
+
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 13V3"/><path d="M3 7L8 2L13 7"/></svg>
+  </button>
+  <script src="/homeharvest/js/script.js"></script>
+</body>
+</html>

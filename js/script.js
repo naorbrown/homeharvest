@@ -12,7 +12,6 @@
     if (!fadeEls.length) return;
 
     if (!('IntersectionObserver' in window)) {
-      // Fallback: show all elements immediately
       fadeEls.forEach(function (el) { el.classList.add('visible'); });
       return;
     }
@@ -86,35 +85,57 @@
     });
   }
 
-  // --- Active nav link highlighting ---
+  // --- Active nav highlighting ---
+  // On homepage: highlight based on scroll position (anchor-based nav)
+  // On sub-pages: highlight based on current URL path
   function initActiveNav() {
-    var sections = document.querySelectorAll('section[id]');
     var navLinks = document.querySelectorAll('.nav-links a');
-    if (!sections.length || !navLinks.length) return;
+    if (!navLinks.length) return;
 
-    if (!('IntersectionObserver' in window)) return;
+    var currentPath = window.location.pathname;
 
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var id = entry.target.getAttribute('id');
-          navLinks.forEach(function (link) {
-            if (link.getAttribute('href') === '#' + id) {
-              link.style.color = 'var(--color-dark-text)';
-              link.style.backgroundColor = 'rgba(36, 40, 36, 0.5)';
-            } else {
-              link.style.color = '';
-              link.style.backgroundColor = '';
-            }
-          });
-        }
-      });
-    }, {
-      threshold: 0,
-      rootMargin: '-20% 0px -60% 0px'
+    // Check if any nav link points to a page (not anchor)
+    var hasPageLinks = false;
+    navLinks.forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (href && href.charAt(0) !== '#') {
+        hasPageLinks = true;
+      }
     });
 
-    sections.forEach(function (section) { observer.observe(section); });
+    if (hasPageLinks) {
+      // Multi-page mode: highlight by matching URL path
+      navLinks.forEach(function (link) {
+        var href = link.getAttribute('href');
+        if (href && currentPath.indexOf(href) === 0 && href !== '/homeharvest/') {
+          link.classList.add('nav-active');
+        }
+      });
+    } else {
+      // Single-page mode: highlight by scroll position (homepage anchor links)
+      var sections = document.querySelectorAll('section[id]');
+      if (!sections.length || !('IntersectionObserver' in window)) return;
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.getAttribute('id');
+            navLinks.forEach(function (link) {
+              if (link.getAttribute('href') === '#' + id) {
+                link.classList.add('nav-active');
+              } else {
+                link.classList.remove('nav-active');
+              }
+            });
+          }
+        });
+      }, {
+        threshold: 0,
+        rootMargin: '-20% 0px -60% 0px'
+      });
+
+      sections.forEach(function (section) { observer.observe(section); });
+    }
   }
 
   // --- Initialize everything ---
