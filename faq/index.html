@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frequently asked questions about starting a home garden. Practical answers on space, crops, watering, sunlight, soil, and pests.">
+  <title>FAQ — Home Harvest</title>
+
+  <meta property="og:title" content="FAQ — Home Harvest">
+  <meta property="og:description" content="Answers to the most common questions about growing food at home.">
+  <meta property="og:image" content="https://naorbrown.github.io/homeharvest/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://naorbrown.github.io/homeharvest/faq/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/homeharvest/css/styles.css">
+  <link rel="stylesheet" href="/homeharvest/pagefind/pagefind-ui.css">
+  <link rel="icon" href="/homeharvest/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- HEADER:START -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/homeharvest/" class="logo" aria-label="Home Harvest — home">
+        <svg class="logo-svg" width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M16 20v-8"/><path d="M16 16c-3-1-5-4-4-7 3 1 5 4 4 7z" fill="rgba(90,143,90,0.15)"/><path d="M16 13c3-1 5-4 4-7-3 1-5 4-4 7z" fill="rgba(90,143,90,0.15)"/><rect x="7" y="20" width="18" height="4" rx="1"/>
+        </svg>
+        <span class="logo-text">Home Harvest</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/homeharvest/spaces/">Spaces</a></li>
+          <li><a href="/homeharvest/guides/">Guides</a></li>
+          <li><a href="/homeharvest/systems/">Systems</a></li>
+          <li><a href="/homeharvest/faq/">FAQ</a></li>
+        </ul>
+      </nav>
+      <button type="button" id="search-open" class="search-trigger" aria-label="Search (Cmd+K)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <span class="search-trigger-label">Search</span>
+        <kbd class="search-kbd">&#8984;K</kbd>
+      </button>
+      <button type="button" class="mobile-menu-btn" aria-label="Open menu" onclick="document.getElementById('mobile-nav').showModal()">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/></svg>
+      </button>
+    </div>
+  </header>
+  <dialog id="mobile-nav" class="mobile-nav" aria-label="Navigation menu">
+    <div class="mobile-nav-content">
+      <button type="button" class="mobile-nav-close" aria-label="Close menu" onclick="document.getElementById('mobile-nav').close()">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="4" y1="4" x2="14" y2="14"/><line x1="14" y1="4" x2="4" y2="14"/></svg>
+      </button>
+      <ul class="mobile-nav-links">
+        <li><a href="/homeharvest/" onclick="document.getElementById('mobile-nav').close()">Home</a></li>
+        <li><a href="/homeharvest/spaces/" onclick="document.getElementById('mobile-nav').close()">Spaces</a></li>
+        <li><a href="/homeharvest/guides/" onclick="document.getElementById('mobile-nav').close()">Guides</a></li>
+        <li><a href="/homeharvest/systems/" onclick="document.getElementById('mobile-nav').close()">Systems</a></li>
+        <li><a href="/homeharvest/faq/" onclick="document.getElementById('mobile-nav').close()">FAQ</a></li>
+      </ul>
+    </div>
+  </dialog>
+  <!-- HEADER:END -->
+
+  <!-- SEARCH:START -->
+  <dialog id="search-dialog" class="search-overlay" aria-label="Search">
+    <div class="search-overlay-inner">
+      <div class="search-overlay-card">
+        <div class="search-overlay-header">
+          <div class="search-hint">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <span>Search guides, spaces, and systems</span>
+          </div>
+          <button id="search-close" type="button" class="search-close-btn" aria-label="Close search">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div id="search-container" class="search-results-area"></div>
+      </div>
+    </div>
+  </dialog>
+  <!-- SEARCH:END -->
+
+  <main>
+    <article class="detail-article">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <ol>
+          <li><a href="/homeharvest/">Home</a></li>
+          <li><span aria-hidden="true">/</span> FAQ</li>
+        </ol>
+      </nav>
+
+      <div class="detail-header">
+        <h1>Frequently Asked Questions</h1>
+        <p class="detail-subtitle">Straight answers to the questions every beginner asks. If you're overthinking it, start here.</p>
+      </div>
+
+      <div class="detail-content faq-layout">
+        <div class="prose">
+
+          <details class="collapsible-section" open>
+            <summary>When should I start my garden? <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+            <div class="section-content">
+              <p>It depends on what you're growing and where you live. Cool-season crops (lettuce, spinach, radishes) can go out 4&ndash;6 weeks before your last frost date. Warm-season crops (tomatoes, peppers, basil) go out after the last frost.</p>
+              <p>If you're starting indoors, you can begin anytime. <a href="/homeharvest/guides/microgreens/">Microgreens</a> and <a href="/homeharvest/guides/herbs/">herbs on a windowsill</a> don't care about the season.</p>
+              <div class="callout">The best time to start is now. Pick one easy crop and plant it today.</div>
+            </div>
+          </details>
+
+          <details class="collapsible-section">
+            <summary>How much space do I need? <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+            <div class="section-content">
+              <p>Less than you think. A <a href="/homeharvest/spaces/windowsill/">windowsill</a> (1&ndash;4 sq ft) is enough for herbs and microgreens. A <a href="/homeharvest/spaces/balcony/">balcony</a> (4&ndash;40 sq ft) can produce tomatoes, peppers, and salad greens.</p>
+              <p>Even a single 5-gallon bucket on a sunny step can grow a full tomato plant through the season.</p>
+              <div class="callout">You don't need a yard. You need one container and a spot that gets sunlight.</div>
+            </div>
+          </details>
+
+          <details class="collapsible-section">
+            <summary>What's the easiest thing to grow? <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+            <div class="section-content">
+              <p><a href="/homeharvest/guides/herbs/">Herbs</a> (basil, mint, chives) and <a href="/homeharvest/guides/microgreens/">microgreens</a> are the most forgiving. Herbs grow in any container with decent light. Microgreens are ready in 7&ndash;14 days with minimal care.</p>
+              <p>For outdoor beginners, radishes and <a href="/homeharvest/guides/lettuce/">loose-leaf lettuce</a> are almost impossible to kill. Radishes are harvestable in 25 days.</p>
+              <div class="callout">Start with herbs. They're cheap, fast, useful in the kitchen, and visibly droop when thirsty &mdash; so you learn watering instincts.</div>
+            </div>
+          </details>
+
+          <details class="collapsible-section">
+            <summary>How often should I water? <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+            <div class="section-content">
+              <p>There's no universal schedule. Check daily: push your finger 1 inch into the soil. If it's dry, water until it drains from the bottom. If it's moist, leave it alone.</p>
+              <p><a href="/homeharvest/systems/containers/">Containers</a> dry out faster than garden beds, especially in wind and heat. Small pots may need daily watering in summer. Raised beds typically need water every 2&ndash;3 days.</p>
+              <div class="callout">Overwatering kills more plants than underwatering. When in doubt, wait a day.</div>
+            </div>
+          </details>
+
+          <details class="collapsible-section">
+            <summary>Do I need full sun? <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+            <div class="section-content">
+              <p>Fruiting crops (tomatoes, peppers) need 6&ndash;8 hours of direct sun. Leafy greens and herbs can manage with 3&ndash;4 hours. Microgreens and sprouts need very little.</p>
+              <p>No sun at all? An <a href="/homeharvest/spaces/indoor/">indoor setup</a> with a basic grow light ($20&ndash;40) removes the sunlight constraint entirely.</p>
+              <div class="callout">More light = more fruit. Less light = stick to leafy greens and herbs. No light = add a grow light.</div>
+            </div>
+          </details>
+
+          <details class="collapsible-section">
+            <summary>How much does it cost to start? <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+            <div class="section-content">
+              <p>A <a href="/homeharvest/spaces/windowsill/">windowsill herb garden</a> costs $10&ndash;30: a few pots, potting mix, and seeds. A balcony container setup runs $30&ndash;80. A raised bed garden starts at $50&ndash;150 depending on materials.</p>
+              <p>Seeds are the cheapest input. One $3 packet of basil seeds contains 200+ plants. Compare that to $3 for a single bundle of cut basil at the store.</p>
+              <div class="callout">Start small and cheap. A $10 herb setup teaches you everything you need before you scale up.</div>
+            </div>
+          </details>
+
+          <details class="collapsible-section">
+            <summary>Can I grow food indoors? <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+            <div class="section-content">
+              <p>Yes. <a href="/homeharvest/guides/herbs/">Herbs</a>, <a href="/homeharvest/guides/microgreens/">microgreens</a>, <a href="/homeharvest/guides/lettuce/">lettuce</a>, and sprouts all grow well indoors. A <a href="/homeharvest/spaces/windowsill/">sunny windowsill</a> is enough for herbs. An <a href="/homeharvest/spaces/indoor/">indoor setup</a> with grow lights handles everything else.</p>
+              <p>Fruiting crops (tomatoes, peppers) are harder indoors &mdash; they need intense light and pollination. Stick to leafy greens and herbs indoors unless you're running grow lights.</p>
+              <div class="callout">Indoor growing is year-round growing. No frost, no pests, no weather. Start with microgreens &mdash; they're the fastest indoor win.</div>
+            </div>
+          </details>
+
+          <details class="collapsible-section">
+            <summary>What basic tools do I need? <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+            <div class="section-content">
+              <p>For containers: pots with drainage holes, saucers, potting mix, seeds, and a spray bottle. That's it.</p>
+              <p>For outdoor beds: add a hand trowel, a watering can or hose, and garden gloves. A soil test kit ($10&ndash;15) is useful but not required to start.</p>
+              <div class="callout">You don't need specialized tools. A container, soil, seeds, and water get you growing today.</div>
+            </div>
+          </details>
+
+          <details class="collapsible-section">
+            <summary>How do I improve my soil? <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+            <div class="section-content">
+              <p>For containers, use bagged indoor potting mix &mdash; never garden soil, which compacts and drains poorly in pots.</p>
+              <p>For <a href="/homeharvest/systems/soil-beds/">outdoor beds</a>, mix in compost. Two inches of compost worked into the top 6 inches of soil improves drainage, aeration, and nutrients. Do this once per season.</p>
+              <p>A simple soil pH test helps too. Most vegetables prefer pH 6.0&ndash;7.0. If your soil is too acidic, add garden lime. Too alkaline, add sulfur.</p>
+              <div class="callout">Good soil = healthy plants. Compost is the single best thing you can add to any garden bed.</div>
+            </div>
+          </details>
+
+          <details class="collapsible-section">
+            <summary>What grows in shade? <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+            <div class="section-content">
+              <p><a href="/homeharvest/guides/lettuce/">Lettuce</a>, spinach, kale, and other leafy greens tolerate partial shade (3&ndash;4 hours of sun). Mint and parsley also do fine with less light.</p>
+              <p><a href="/homeharvest/guides/microgreens/">Microgreens</a> need even less &mdash; indirect light works. Mushroom kits grow in dark corners.</p>
+              <p>Fruiting crops (tomatoes, peppers, cucumbers) won't produce well in shade. They need 6+ hours of direct sun.</p>
+              <div class="callout">Shade doesn't mean you can't grow. It means you grow leaves, not fruits.</div>
+            </div>
+          </details>
+
+          <details class="collapsible-section">
+            <summary>How do I know when to harvest? <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+            <div class="section-content">
+              <p>Each crop is different, but here are the basics:</p>
+              <ul>
+                <li><strong><a href="/homeharvest/guides/herbs/">Herbs</a></strong> &mdash; Pick once they have several sets of true leaves. Pinch from the top to encourage bushier growth.</li>
+                <li><strong><a href="/homeharvest/guides/lettuce/">Lettuce</a></strong> &mdash; Harvest outer leaves when they're 4&ndash;6 inches tall. The inner leaves keep growing.</li>
+                <li><strong><a href="/homeharvest/guides/tomatoes/">Tomatoes</a></strong> &mdash; Wait until fully colored and slightly soft to touch. A ripe tomato releases easily from the vine.</li>
+                <li><strong>Radishes</strong> &mdash; Pull when the root top pushes above the soil surface, usually 25&ndash;30 days.</li>
+              </ul>
+              <div class="callout">When in doubt, harvest a little early. Most crops taste better young. Overgrown lettuce turns bitter, bolted herbs lose flavor.</div>
+            </div>
+          </details>
+
+          <details class="collapsible-section">
+            <summary>How do I deal with pests without chemicals? <svg class="chevron-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7.5L10 12.5L15 7.5"/></svg></summary>
+            <div class="section-content">
+              <p>Prevention is easier than treatment. Healthy soil, proper spacing, and good airflow prevent most problems.</p>
+              <ul>
+                <li><strong>Aphids</strong> &mdash; Blast them off with a strong water spray. Repeat daily for a week.</li>
+                <li><strong>Caterpillars</strong> &mdash; Hand-pick them. Check undersides of leaves in the morning.</li>
+                <li><strong>Fungal issues</strong> &mdash; Water at the base, not on leaves. Improve air circulation. Remove affected leaves immediately.</li>
+                <li><strong>Slugs</strong> &mdash; Copper tape around containers. Shallow dishes of beer as traps.</li>
+              </ul>
+              <p>Companion planting helps too: basil repels aphids from tomatoes, marigolds deter many garden pests.</p>
+              <div class="callout">Most pest problems come from overcrowding and overwatering. Fix the environment before treating symptoms.</div>
+            </div>
+          </details>
+
+        </div>
+
+        <!-- Visual Reference Guides -->
+        <div class="visual-guides">
+          <h2 style="font-size: 1.5rem; font-weight: 700; color: var(--color-dark-text); margin-bottom: 0.5rem;">Visual Reference Guides</h2>
+          <p style="font-size: 0.9375rem; color: rgba(228, 232, 227, 0.55); margin-bottom: 2rem;">Quick-reference charts for planning your garden.</p>
+
+          <!-- 1. Planting Calendar -->
+          <h3 class="infographic-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            Planting Calendar
+          </h3>
+          <p class="infographic-desc">When to sow, transplant, and harvest common crops (Northern Hemisphere, temperate zones).</p>
+
+          <div class="calendar-legend">
+            <div class="calendar-legend-item"><div class="calendar-legend-swatch" style="background-color: rgba(90, 143, 90, 0.3);"></div> Sow</div>
+            <div class="calendar-legend-item"><div class="calendar-legend-swatch" style="background-color: rgba(196, 160, 78, 0.3);"></div> Transplant</div>
+            <div class="calendar-legend-item"><div class="calendar-legend-swatch" style="background-color: rgba(139, 109, 75, 0.3);"></div> Harvest</div>
+          </div>
+
+          <div class="planting-calendar">
+            <table>
+              <thead>
+                <tr>
+                  <th>Crop</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lettuce</td><td></td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td></td>
+                </tr>
+                <tr>
+                  <td>Basil</td><td></td><td></td><td class="cal-sow">sow</td><td class="cal-transplant">move</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>Tomatoes</td><td></td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-transplant">move</td><td class="cal-transplant">move</td><td></td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>Peppers</td><td></td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-transplant">move</td><td class="cal-transplant">move</td><td></td><td></td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>Radishes</td><td></td><td></td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td></td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-harvest">pick</td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>Carrots</td><td></td><td></td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td></td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td></td><td></td>
+                </tr>
+                <tr>
+                  <td>Microgreens</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td><td class="cal-sow">sow</td>
+                </tr>
+                <tr>
+                  <td>Herbs (indoor)</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td><td class="cal-harvest">pick</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 2. Companion Planting Chart -->
+          <h3 class="infographic-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20v-10"/><path d="M12 14c-2.5-1-4-3-3-6 2.5 1 4 3 3 6z"/><path d="M12 11c2.5-1 4-3 3-6-2.5 1-4 3-3 6z"/></svg>
+            Companion Planting
+          </h3>
+          <p class="infographic-desc">Which plants grow well together and which to keep apart.</p>
+
+          <div class="seasonal-grid-wrapper">
+            <table class="seasonal-table">
+              <thead>
+                <tr>
+                  <th></th><th>Tomatoes</th><th>Basil</th><th>Peppers</th><th>Lettuce</th><th>Carrots</th><th>Beans</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="seasonal-season">Tomatoes</th>
+                  <td class="companion-neutral">&mdash;</td>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-bad">&#10007;</td>
+                </tr>
+                <tr>
+                  <th class="seasonal-season">Basil</th>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-neutral">&mdash;</td>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-neutral">&mdash;</td>
+                  <td class="companion-neutral">&mdash;</td>
+                </tr>
+                <tr>
+                  <th class="seasonal-season">Peppers</th>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-neutral">&mdash;</td>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-bad">&#10007;</td>
+                </tr>
+                <tr>
+                  <th class="seasonal-season">Lettuce</th>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-neutral">&mdash;</td>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-good">&#10003;</td>
+                </tr>
+                <tr>
+                  <th class="seasonal-season">Carrots</th>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-neutral">&mdash;</td>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-neutral">&mdash;</td>
+                  <td class="companion-good">&#10003;</td>
+                </tr>
+                <tr>
+                  <th class="seasonal-season">Beans</th>
+                  <td class="companion-bad">&#10007;</td>
+                  <td class="companion-neutral">&mdash;</td>
+                  <td class="companion-bad">&#10007;</td>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-good">&#10003;</td>
+                  <td class="companion-neutral">&mdash;</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size: 0.75rem; color: rgba(228, 232, 227, 0.3); margin-top: 0.5rem; margin-bottom: 1.5rem;">&#10003; = good companions &middot; &#10007; = keep apart &middot; &mdash; = neutral</p>
+
+          <!-- 3. Sunlight Requirements -->
+          <h3 class="infographic-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            Sunlight Requirements
+          </h3>
+          <p class="infographic-desc">Match your available light to the right crops.</p>
+
+          <div class="sun-cards">
+            <div class="sun-card">
+              <div class="sun-card-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-honey)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                Full Sun
+              </div>
+              <div class="sun-card-hours">6&ndash;8+ hours direct sun</div>
+              <ul>
+                <li>Tomatoes</li>
+                <li>Peppers</li>
+                <li>Basil</li>
+                <li>Cucumbers</li>
+                <li>Squash</li>
+                <li>Beans</li>
+              </ul>
+            </div>
+            <div class="sun-card">
+              <div class="sun-card-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-olive)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M1 12h2M21 12h2"/></svg>
+                Partial Sun
+              </div>
+              <div class="sun-card-hours">3&ndash;6 hours direct sun</div>
+              <ul>
+                <li>Lettuce</li>
+                <li>Spinach</li>
+                <li>Herbs</li>
+                <li>Kale</li>
+                <li>Carrots</li>
+                <li>Beets</li>
+              </ul>
+            </div>
+            <div class="sun-card">
+              <div class="sun-card-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(228,232,227,0.4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2"/></svg>
+                Low Light / Shade
+              </div>
+              <div class="sun-card-hours">1&ndash;3 hours or indirect light</div>
+              <ul>
+                <li>Microgreens</li>
+                <li>Sprouts</li>
+                <li>Mint</li>
+                <li>Mushrooms</li>
+                <li>Green onions</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 4. Soil pH Guide -->
+          <h3 class="infographic-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20c4.4 0 8-1.8 8-4V8c0-2.2-3.6-4-8-4S4 5.8 4 8v8c0 2.2 3.6 4 8 4z"/><path d="M4 8c0 2.2 3.6 4 8 4s8-1.8 8-4"/></svg>
+            Soil pH Guide
+          </h3>
+          <p class="infographic-desc">Most vegetables prefer slightly acidic to neutral soil (pH 6.0&ndash;7.0).</p>
+
+          <div class="ph-scale-wrapper">
+            <div class="ph-labels">
+              <span>4.0 &mdash; Acidic</span>
+              <span>7.0 &mdash; Neutral</span>
+              <span>8.0 &mdash; Alkaline</span>
+            </div>
+            <div class="ph-scale" aria-label="pH scale from acidic (4.0) to alkaline (8.0)"></div>
+            <div class="ph-markers">
+              <div class="ph-marker">Blueberries <span>4.5&ndash;5.5</span></div>
+              <div class="ph-marker">Potatoes <span>5.0&ndash;6.0</span></div>
+              <div class="ph-marker">Tomatoes <span>6.0&ndash;6.8</span></div>
+              <div class="ph-marker">Peppers <span>6.0&ndash;7.0</span></div>
+              <div class="ph-marker">Lettuce <span>6.0&ndash;7.0</span></div>
+              <div class="ph-marker">Herbs <span>6.0&ndash;7.5</span></div>
+              <div class="ph-marker">Beans <span>6.0&ndash;7.5</span></div>
+              <div class="ph-marker">Brassicas <span>6.5&ndash;7.5</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- FOOTER:START -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/homeharvest/" class="logo" aria-label="Home Harvest — home">
+            <svg class="logo-svg" width="24" height="24" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 20v-8"/><path d="M16 16c-3-1-5-4-4-7 3 1 5 4 4 7z" fill="rgba(90,143,90,0.15)"/><path d="M16 13c3-1 5-4 4-7-3 1-5 4-4 7z" fill="rgba(90,143,90,0.15)"/><rect x="7" y="20" width="18" height="4" rx="1"/>
+            </svg>
+            <span class="logo-text logo-text--visible">Home Harvest</span>
+          </a>
+          <p>Practical guides for growing food at home. Any space. Any level.</p>
+        </div>
+        <div>
+          <h3 class="footer-heading">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="/homeharvest/spaces/">Growing Spaces</a></li>
+            <li><a href="/homeharvest/guides/">Crop Guides</a></li>
+            <li><a href="/homeharvest/systems/">Growing Systems</a></li>
+            <li><a href="/homeharvest/faq/">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Popular Guides</h3>
+          <ul class="footer-links">
+            <li><a href="/homeharvest/guides/herbs/">Herbs</a></li>
+            <li><a href="/homeharvest/guides/tomatoes/">Tomatoes</a></li>
+            <li><a href="/homeharvest/guides/microgreens/">Microgreens</a></li>
+            <li><a href="/homeharvest/guides/lettuce/">Lettuce</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-heading">Suite</h3>
+          <ul class="footer-links">
+            <li><a href="https://naorbrown.github.io/the-clean-pantry/">The Clean Pantry</a></li>
+            <li><a href="https://naorbrown.github.io/plant-therapy/">Plant Therapy</a></li>
+            <li><a href="https://naorbrown.github.io/clean-snacks/">Clean Snacks</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Home Harvest. Grow food at home.
+      </div>
+    </div>
+  </footer>
+  <!-- FOOTER:END -->
+
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 13V3"/><path d="M3 7L8 2L13 7"/></svg>
+  </button>
+
+  <script src="/homeharvest/pagefind/pagefind-ui.js"></script>
+  <script src="/homeharvest/js/script.js"></script>
+</body>
+</html>

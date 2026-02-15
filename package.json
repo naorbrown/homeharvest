@@ -1,0 +1,14 @@
+{
+  "name": "homeharvest",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "index": "pagefind --site . --output-subdir pagefind",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "pagefind": "^1.4.0"
+  }
+}
