@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Home Harvest — Learn to grow your own food at home. Balcony, rooftop, backyard, or indoors. Simple, calm, achievable food sovereignty.">
+  <title>Home Harvest — Grow Food. Grow Freedom.</title>
+
+  <!-- Preload Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="Home Harvest — home">
+        <span class="logo-icon" aria-hidden="true">🌱</span>
+        <span class="logo-text">Home Harvest</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#why-grow">Why Grow</a></li>
+          <li><a href="#start-anywhere">Start Anywhere</a></li>
+          <li><a href="#crops">Crops</a></li>
+          <li><a href="#systems">Systems</a></li>
+          <li><a href="#tools">Tools</a></li>
+          <li><a href="#seasonal">Seasonal</a></li>
+          <li><a href="#closed-loop">Closed Loop</a></li>
+        </ul>
+      </nav>
+
+      <button type="button" class="mobile-menu-btn" aria-label="Open menu" onclick="document.getElementById('mobile-nav').showModal()">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="3" y1="5" x2="17" y2="5"/>
+          <line x1="3" y1="10" x2="17" y2="10"/>
+          <line x1="3" y1="15" x2="17" y2="15"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Dialog -->
+  <dialog id="mobile-nav" class="mobile-nav" aria-label="Navigation menu">
+    <div class="mobile-nav-content">
+      <button type="button" class="mobile-nav-close" aria-label="Close menu" onclick="document.getElementById('mobile-nav').close()">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="4" y1="4" x2="14" y2="14"/>
+          <line x1="14" y1="4" x2="4" y2="14"/>
+        </svg>
+      </button>
+      <ul class="mobile-nav-links">
+        <li><a href="#why-grow" onclick="document.getElementById('mobile-nav').close()">Why Grow Your Own</a></li>
+        <li><a href="#start-anywhere" onclick="document.getElementById('mobile-nav').close()">Start Anywhere</a></li>
+        <li><a href="#crops" onclick="document.getElementById('mobile-nav').close()">Beginner Crops</a></li>
+        <li><a href="#systems" onclick="document.getElementById('mobile-nav').close()">Growing Systems</a></li>
+        <li><a href="#tools" onclick="document.getElementById('mobile-nav').close()">Tools &amp; Setup</a></li>
+        <li><a href="#seasonal" onclick="document.getElementById('mobile-nav').close()">Seasonal Guide</a></li>
+        <li><a href="#closed-loop" onclick="document.getElementById('mobile-nav').close()">Closed Loop</a></li>
+      </ul>
+    </div>
+  </dialog>
+
+  <main>
+    <!-- ===== 1. HERO ===== -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-icon" aria-hidden="true">🌿</div>
+        <h1 id="hero-heading">Grow Food. Grow <span>Freedom.</span></h1>
+        <p class="hero-subtitle">
+          Your food supply doesn't have to depend on anyone else. Whether you have a balcony, a windowsill, or a backyard, you can grow nutrient-dense food at home. Start small, learn as you go, and build real resilience — one plant at a time.
+        </p>
+        <div class="hero-cta-row">
+          <a href="#crops" class="btn btn-primary">Start Your First Plant</a>
+          <a href="#why-grow" class="btn btn-secondary">Learn Why It Matters</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" role="separator"></div>
+
+    <!-- ===== 2. WHY GROW YOUR OWN ===== -->
+    <section class="section" id="why-grow" aria-labelledby="why-grow-heading">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-title" id="why-grow-heading">Why Grow Your Own?</h2>
+          <p class="section-subtitle">Five practical reasons to take your food into your own hands.</p>
+        </div>
+
+        <div class="card-grid card-grid--5 fade-in">
+          <div class="card icon-card">
+            <div class="card-icon" aria-hidden="true">🛡️</div>
+            <h3 class="card-title">Fewer Pesticides</h3>
+            <p class="card-desc">You control what goes on your food. No synthetic sprays, no chemical residues. Just clean produce grown the way you choose.</p>
+          </div>
+
+          <div class="card icon-card">
+            <div class="card-icon" aria-hidden="true">🥬</div>
+            <h3 class="card-title">Higher Nutrients</h3>
+            <p class="card-desc">Homegrown produce is harvested at peak ripeness, when nutrient density is highest — not weeks before it reaches the shelf.</p>
+          </div>
+
+          <div class="card icon-card">
+            <div class="card-icon" aria-hidden="true">💰</div>
+            <h3 class="card-title">Real Savings</h3>
+            <p class="card-desc">A single packet of herb seeds can replace months of store-bought bundles. Microgreens cost pennies per tray.</p>
+          </div>
+
+          <div class="card icon-card">
+            <div class="card-icon" aria-hidden="true">🔗</div>
+            <h3 class="card-title">Supply Resilience</h3>
+            <p class="card-desc">When supply chains wobble, your garden doesn't. Growing even a fraction of your own food reduces dependency on systems you can't control.</p>
+          </div>
+
+          <div class="card icon-card">
+            <div class="card-icon" aria-hidden="true">✨</div>
+            <h3 class="card-title">Unmatched Flavor</h3>
+            <p class="card-desc">A tomato picked ripe from your plant tastes nothing like a grocery store tomato. Once you taste the difference, there's no going back.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" role="separator"></div>
+
+    <!-- ===== 3. START ANYWHERE ===== -->
+    <section class="section" id="start-anywhere" aria-labelledby="start-anywhere-heading">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-title" id="start-anywhere-heading">Start Anywhere</h2>
+          <p class="section-subtitle">No yard? No problem. Every space is a growing space.</p>
+        </div>
+
+        <div class="card-grid card-grid--4 fade-in">
+          <div class="card env-card">
+            <div class="card-icon" aria-hidden="true">🏙️</div>
+            <h3 class="card-title">Balcony</h3>
+            <p class="card-desc">Containers and railing planters turn a small balcony into a productive growing space. Herbs, greens, and compact vegetables thrive here.</p>
+            <div class="card-meta">
+              <div class="card-meta-item"><span>Space</span> 4–40 sq ft</div>
+              <div class="card-meta-item"><span>Light</span> 4–6+ hours direct sun</div>
+              <div class="card-meta-item"><span>Level</span> Beginner friendly</div>
+              <div class="card-meta-item"><span>Crops</span> Herbs, lettuce, tomatoes, peppers</div>
+            </div>
+          </div>
+
+          <div class="card env-card">
+            <div class="card-icon" aria-hidden="true">🪟</div>
+            <h3 class="card-title">Windowsill</h3>
+            <p class="card-desc">The simplest entry point. A sunny window is all you need for herbs, microgreens, and small leafy greens year-round.</p>
+            <div class="card-meta">
+              <div class="card-meta-item"><span>Space</span> 1–4 sq ft</div>
+              <div class="card-meta-item"><span>Light</span> 3–5 hours direct sun</div>
+              <div class="card-meta-item"><span>Level</span> Absolute beginner</div>
+              <div class="card-meta-item"><span>Crops</span> Herbs, microgreens, sprouts</div>
+            </div>
+          </div>
+
+          <div class="card env-card">
+            <div class="card-icon" aria-hidden="true">🏡</div>
+            <h3 class="card-title">Backyard</h3>
+            <p class="card-desc">Even a small patch of ground opens up your full range of growing options — raised beds, in-ground plots, and vertical systems.</p>
+            <div class="card-meta">
+              <div class="card-meta-item"><span>Space</span> 20–200+ sq ft</div>
+              <div class="card-meta-item"><span>Light</span> 6–8+ hours direct sun</div>
+              <div class="card-meta-item"><span>Level</span> Beginner to advanced</div>
+              <div class="card-meta-item"><span>Crops</span> Full range — vegetables, fruits, roots</div>
+            </div>
+          </div>
+
+          <div class="card env-card">
+            <div class="card-icon" aria-hidden="true">💡</div>
+            <h3 class="card-title">Indoor Grow Lights</h3>
+            <p class="card-desc">No natural light? No season limitations. A basic grow light setup lets you grow leafy greens and herbs anywhere, year-round.</p>
+            <div class="card-meta">
+              <div class="card-meta-item"><span>Space</span> 2–20 sq ft</div>
+              <div class="card-meta-item"><span>Light</span> LED grow lights (12–16 hrs)</div>
+              <div class="card-meta-item"><span>Level</span> Beginner–intermediate</div>
+              <div class="card-meta-item"><span>Crops</span> Greens, herbs, microgreens</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" role="separator"></div>
+
+    <!-- ===== 4. BEGINNER CROPS ===== -->
+    <section class="section" id="crops" aria-labelledby="crops-heading">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-title" id="crops-heading">Beginner Crops</h2>
+          <p class="section-subtitle">Fast rewards, low effort. These are the plants that build confidence.</p>
+        </div>
+
+        <div class="card-grid card-grid--5 fade-in">
+          <div class="card crop-card">
+            <div class="card-icon" aria-hidden="true">🌿</div>
+            <h3 class="card-title">Herbs</h3>
+            <p class="card-desc">Basil, cilantro, mint, parsley. Harvest in 3–4 weeks from seed. Grow in any container on any windowsill.</p>
+            <div class="crop-badges">
+              <span class="badge badge--easy">Easy</span>
+              <span class="badge badge--neutral">3–4 weeks</span>
+              <span class="badge badge--neutral">Container OK</span>
+            </div>
+          </div>
+
+          <div class="card crop-card">
+            <div class="card-icon" aria-hidden="true">🌱</div>
+            <h3 class="card-title">Microgreens</h3>
+            <p class="card-desc">Sunflower, radish, broccoli, pea shoots. Ready in 7–14 days. Dense nutrition, minimal space. The fastest win in gardening.</p>
+            <div class="crop-badges">
+              <span class="badge badge--easy">Easy</span>
+              <span class="badge badge--neutral">7–14 days</span>
+              <span class="badge badge--neutral">Indoor</span>
+            </div>
+          </div>
+
+          <div class="card crop-card">
+            <div class="card-icon" aria-hidden="true">🥗</div>
+            <h3 class="card-title">Lettuce</h3>
+            <p class="card-desc">Loose-leaf varieties are cut-and-come-again — harvest outer leaves and the plant keeps producing for weeks.</p>
+            <div class="crop-badges">
+              <span class="badge badge--easy">Easy</span>
+              <span class="badge badge--neutral">30–45 days</span>
+              <span class="badge badge--neutral">Container OK</span>
+            </div>
+          </div>
+
+          <div class="card crop-card">
+            <div class="card-icon" aria-hidden="true">🍅</div>
+            <h3 class="card-title">Tomatoes</h3>
+            <p class="card-desc">Cherry and patio varieties produce abundantly in containers. Need sun and consistent watering, but the payoff is enormous.</p>
+            <div class="crop-badges">
+              <span class="badge badge--moderate">Moderate</span>
+              <span class="badge badge--neutral">60–80 days</span>
+              <span class="badge badge--neutral">High yield</span>
+            </div>
+          </div>
+
+          <div class="card crop-card">
+            <div class="card-icon" aria-hidden="true">🌶️</div>
+            <h3 class="card-title">Peppers</h3>
+            <p class="card-desc">Sweet or hot — peppers love containers and warm, sunny spots. A single plant can produce dozens of peppers over one season.</p>
+            <div class="crop-badges">
+              <span class="badge badge--moderate">Moderate</span>
+              <span class="badge badge--neutral">70–90 days</span>
+              <span class="badge badge--neutral">High yield</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" role="separator"></div>
+
+    <!-- ===== 5. GROWING SYSTEMS ===== -->
+    <section class="section" id="systems" aria-labelledby="systems-heading">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-title" id="systems-heading">Growing Systems</h2>
+          <p class="section-subtitle">Choose the setup that fits your space, budget, and goals.</p>
+        </div>
+
+        <div class="comparison-table-wrapper fade-in">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th scope="col">System</th>
+                <th scope="col">Startup Cost</th>
+                <th scope="col">Complexity</th>
+                <th scope="col">Yield</th>
+                <th scope="col">Space Efficiency</th>
+                <th scope="col">Maintenance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="system-name"><span class="system-icon" aria-hidden="true">🌍</span>Soil Beds</td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="Low cost">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="Low complexity">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="High yield">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="Moderate space efficiency">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="Low maintenance">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="system-name"><span class="system-icon" aria-hidden="true">💧</span>Hydroponics</td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="High cost">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="High complexity">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="Very high yield">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="High space efficiency">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="High maintenance">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot"></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="system-name"><span class="system-icon" aria-hidden="true">📐</span>Vertical Towers</td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="Moderate cost">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="Moderate complexity">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="High yield">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="Very high space efficiency">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="Moderate maintenance">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="system-name"><span class="system-icon" aria-hidden="true">🪴</span>Containers</td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="Very low cost">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="Very low complexity">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="Moderate yield">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="High space efficiency">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="rating-dots" role="img" aria-label="Low maintenance">
+                    <span class="rating-dot filled"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                    <span class="rating-dot"></span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" role="separator"></div>
+
+    <!-- ===== 6. TOOLS & SETUP ===== -->
+    <section class="section" id="tools" aria-labelledby="tools-heading">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-title" id="tools-heading">Tools &amp; Setup</h2>
+          <p class="section-subtitle">Start small. Add complexity later. You need less than you think.</p>
+        </div>
+
+        <div class="tools-grid fade-in">
+          <div>
+            <div class="tools-category-title">
+              Essentials <span class="label-tag">Start here</span>
+            </div>
+            <div class="tool-item-list">
+              <div class="tool-item">
+                <span class="tool-item-icon" aria-hidden="true">🪴</span>
+                <div class="tool-item-text">
+                  <div class="tool-item-name">Containers</div>
+                  Any pot with drainage. Repurpose buckets, bags, or window boxes.
+                </div>
+              </div>
+              <div class="tool-item">
+                <span class="tool-item-icon" aria-hidden="true">🌍</span>
+                <div class="tool-item-text">
+                  <div class="tool-item-name">Quality Soil</div>
+                  A good potting mix makes everything easier. Avoid garden soil in containers.
+                </div>
+              </div>
+              <div class="tool-item">
+                <span class="tool-item-icon" aria-hidden="true">🫘</span>
+                <div class="tool-item-text">
+                  <div class="tool-item-name">Seeds</div>
+                  Start with a few herb and green seed packets. Buy from reputable sources.
+                </div>
+              </div>
+              <div class="tool-item">
+                <span class="tool-item-icon" aria-hidden="true">🚿</span>
+                <div class="tool-item-text">
+                  <div class="tool-item-name">Watering Can</div>
+                  Gentle watering prevents soil erosion and seedling damage. A small can is fine.
+                </div>
+              </div>
+              <div class="tool-item">
+                <span class="tool-item-icon" aria-hidden="true">🧪</span>
+                <div class="tool-item-text">
+                  <div class="tool-item-name">Basic Nutrients</div>
+                  An all-purpose organic fertilizer covers most crops through their lifecycle.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="tools-category-title">
+              Optional Upgrades <span class="label-tag label-tag--optional">When ready</span>
+            </div>
+            <div class="tool-item-list">
+              <div class="tool-item">
+                <span class="tool-item-icon" aria-hidden="true">💡</span>
+                <div class="tool-item-text">
+                  <div class="tool-item-name">Grow Lights</div>
+                  LED panels extend your season and enable indoor growing year-round.
+                </div>
+              </div>
+              <div class="tool-item">
+                <span class="tool-item-icon" aria-hidden="true">🔧</span>
+                <div class="tool-item-text">
+                  <div class="tool-item-name">Drip Irrigation</div>
+                  Timer-based watering systems save time and keep moisture consistent.
+                </div>
+              </div>
+              <div class="tool-item">
+                <span class="tool-item-icon" aria-hidden="true">🪜</span>
+                <div class="tool-item-text">
+                  <div class="tool-item-name">Trellises</div>
+                  Vertical support for tomatoes, beans, and cucumbers. Maximizes space.
+                </div>
+              </div>
+              <div class="tool-item">
+                <span class="tool-item-icon" aria-hidden="true">📊</span>
+                <div class="tool-item-text">
+                  <div class="tool-item-name">Sensors</div>
+                  Soil moisture and pH meters take the guesswork out of plant care.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" role="separator"></div>
+
+    <!-- ===== 7. SEASONAL PLANTING GUIDE ===== -->
+    <section class="section" id="seasonal" aria-labelledby="seasonal-heading">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-title" id="seasonal-heading">Seasonal Planting Guide</h2>
+          <p class="section-subtitle">Know what to plant and when. Timing is everything.</p>
+        </div>
+
+        <div class="seasonal-grid-wrapper fade-in">
+          <table class="seasonal-table" aria-label="Seasonal planting guide">
+            <thead>
+              <tr>
+                <th scope="col">Season</th>
+                <th scope="col">Leafy Greens</th>
+                <th scope="col">Herbs</th>
+                <th scope="col">Fruiting Crops</th>
+                <th scope="col">Roots</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="seasonal-season">🌸 Spring</th>
+                <td>
+                  <span class="seasonal-crop-tag">Lettuce</span>
+                  <span class="seasonal-crop-tag">Spinach</span>
+                  <span class="seasonal-crop-tag">Kale</span>
+                </td>
+                <td>
+                  <span class="seasonal-crop-tag--olive">Cilantro</span>
+                  <span class="seasonal-crop-tag--olive">Dill</span>
+                  <span class="seasonal-crop-tag--olive">Parsley</span>
+                </td>
+                <td>
+                  <span class="seasonal-crop-tag--warm">Tomatoes*</span>
+                  <span class="seasonal-crop-tag--warm">Peppers*</span>
+                </td>
+                <td>
+                  <span class="seasonal-crop-tag--soil">Radishes</span>
+                  <span class="seasonal-crop-tag--soil">Carrots</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="seasonal-season">☀️ Summer</th>
+                <td>
+                  <span class="seasonal-crop-tag">Swiss Chard</span>
+                  <span class="seasonal-crop-tag">Arugula</span>
+                </td>
+                <td>
+                  <span class="seasonal-crop-tag--olive">Basil</span>
+                  <span class="seasonal-crop-tag--olive">Rosemary</span>
+                  <span class="seasonal-crop-tag--olive">Mint</span>
+                </td>
+                <td>
+                  <span class="seasonal-crop-tag--warm">Tomatoes</span>
+                  <span class="seasonal-crop-tag--warm">Peppers</span>
+                  <span class="seasonal-crop-tag--warm">Cucumbers</span>
+                  <span class="seasonal-crop-tag--warm">Beans</span>
+                </td>
+                <td>
+                  <span class="seasonal-crop-tag--soil">Beets</span>
+                  <span class="seasonal-crop-tag--soil">Potatoes</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="seasonal-season">🍂 Fall</th>
+                <td>
+                  <span class="seasonal-crop-tag">Lettuce</span>
+                  <span class="seasonal-crop-tag">Spinach</span>
+                  <span class="seasonal-crop-tag">Kale</span>
+                </td>
+                <td>
+                  <span class="seasonal-crop-tag--olive">Cilantro</span>
+                  <span class="seasonal-crop-tag--olive">Chives</span>
+                </td>
+                <td>
+                  <span class="seasonal-crop-tag--warm">Late tomatoes</span>
+                  <span class="seasonal-crop-tag--warm">Peas</span>
+                </td>
+                <td>
+                  <span class="seasonal-crop-tag--soil">Turnips</span>
+                  <span class="seasonal-crop-tag--soil">Radishes</span>
+                  <span class="seasonal-crop-tag--soil">Garlic</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="seasonal-season">❄️ Winter</th>
+                <td>
+                  <span class="seasonal-crop-tag">Microgreens</span>
+                  <span class="seasonal-crop-tag">Indoor greens</span>
+                </td>
+                <td>
+                  <span class="seasonal-crop-tag--olive">Indoor herbs</span>
+                  <span class="seasonal-crop-tag--olive">Sprouts</span>
+                </td>
+                <td>
+                  <span class="seasonal-crop-tag--warm">Indoor peppers*</span>
+                </td>
+                <td>
+                  <span class="seasonal-crop-tag--soil">Plan spring</span>
+                  <span class="seasonal-crop-tag--soil">Order seeds</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="seasonal-footnote">
+          * Start indoors / transplant when warm. Adjust for your local climate and hardiness zone.
+        </p>
+      </div>
+    </section>
+
+    <div class="section-divider" role="separator"></div>
+
+    <!-- ===== 8. SEED SAVING & COMPOSTING ===== -->
+    <section class="section" id="closed-loop" aria-labelledby="closed-loop-heading">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-title" id="closed-loop-heading">Seed Saving &amp; Composting</h2>
+          <p class="section-subtitle">Close the loop. Grow food, save seeds, return scraps to soil.</p>
+        </div>
+
+        <div class="split-section fade-in">
+          <div class="split-card">
+            <div class="card-icon card-icon--sm" aria-hidden="true">🫘</div>
+            <h3 class="split-card-title">Seed Saving</h3>
+            <p class="split-card-subtitle">Keep your best genetics. Reduce seed costs to zero.</p>
+            <ul class="split-card-list">
+              <li>
+                <span aria-hidden="true">→</span>
+                <span><strong>Why it matters</strong> — Saving seeds from your strongest plants creates varieties adapted to your specific conditions.</span>
+              </li>
+              <li>
+                <span aria-hidden="true">→</span>
+                <span><strong>Beginner seeds</strong> — Start with tomatoes, peppers, beans, and lettuce. These are self-pollinating and easy to collect.</span>
+              </li>
+              <li>
+                <span aria-hidden="true">→</span>
+                <span><strong>Storage</strong> — Dry seeds thoroughly. Store in labeled envelopes in a cool, dark place. Most last 2–5 years.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="split-card">
+            <div class="card-icon card-icon--sm" aria-hidden="true">♻️</div>
+            <h3 class="split-card-title">Composting</h3>
+            <p class="split-card-subtitle">Turn kitchen waste into the richest soil amendment you can get.</p>
+            <ul class="split-card-list">
+              <li>
+                <span aria-hidden="true">→</span>
+                <span><strong>Kitchen scrap compost</strong> — A countertop bin collects coffee grounds, vegetable peels, and eggshells. Add to a tumbler or pile weekly.</span>
+              </li>
+              <li>
+                <span aria-hidden="true">→</span>
+                <span><strong>Worm bins</strong> — Vermicomposting works indoors, produces rich castings, and handles scraps continuously. Ideal for apartments.</span>
+              </li>
+              <li>
+                <span aria-hidden="true">→</span>
+                <span><strong>Outdoor piles</strong> — Layer greens (nitrogen) and browns (carbon). Turn occasionally. Finished compost in 2–6 months.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" role="separator"></div>
+
+    <!-- ===== 9. FINAL CTA ===== -->
+    <section class="final-cta" id="final-cta" aria-labelledby="final-cta-heading">
+      <div class="final-cta-bg" aria-hidden="true"></div>
+      <div class="final-cta-inner fade-in">
+        <h2 id="final-cta-heading">Start With One Plant.</h2>
+        <p>
+          You don't need a farm. You don't need experience. You don't need perfect conditions. Pick one plant, put it in soil, give it light and water, and watch it grow. That's the entire starting point. Everything else builds from there.
+        </p>
+        <a href="#crops" class="btn btn-primary">Plant Something This Week</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo" aria-label="Home Harvest — home">
+            <span class="logo-icon" aria-hidden="true">🌱</span>
+            <span class="logo-text logo-text--visible">Home Harvest</span>
+          </a>
+          <p>Empowering individuals to grow their own food at home. Simple education for real food sovereignty.</p>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="#why-grow">Why Grow Your Own</a></li>
+            <li><a href="#start-anywhere">Start Anywhere</a></li>
+            <li><a href="#crops">Beginner Crops</a></li>
+            <li><a href="#systems">Growing Systems</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Resources</h3>
+          <ul class="footer-links">
+            <li><a href="#tools">Tools &amp; Setup</a></li>
+            <li><a href="#seasonal">Seasonal Guide</a></li>
+            <li><a href="#closed-loop">Seed Saving</a></li>
+            <li><a href="#closed-loop">Composting</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 Home Harvest. Grow food. Grow freedom.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 13V3"/>
+      <path d="M3 7L8 2L13 7"/>
+    </svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
