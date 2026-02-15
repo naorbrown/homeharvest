@@ -1,46 +1,41 @@
 /* =============================================
    HOME HARVEST — Design System & Styles
    Sister site to: Clean Pantry, Plant Therapy, Clean Snacks
-   Accent: Sage Green / Earthy Olive
+   Palette: Earthy green + warm brown
    ============================================= */
 
 /* --- CSS Custom Properties --- */
 :root {
   /* Background palette — warm earthy dark */
   --color-dark-bg: #1a1d1b;
-  --color-dark-surface: #242824;
-  --color-dark-elevated: #333a33;
+  --color-dark-surface: #222620;
+  --color-dark-elevated: #303830;
   --color-dark-text: #e4e8e3;
 
-  /* Primary accent — sage green */
-  --color-sage: #6b9a6b;
-  --color-sage-dark: #578a57;
-  --color-sage-light: #8dc09a;
+  /* Primary accent — earthy green */
+  --color-primary: #5a8f5a;
+  --color-primary-dark: #4a7a4a;
+  --color-primary-light: #7ab87a;
 
-  /* Secondary accent — soil brown */
-  --color-soil: #a08060;
-  --color-soil-light: #c4a47e;
+  /* Secondary accent — warm brown / soil */
+  --color-soil: #8b6d4b;
+  --color-soil-light: #b89570;
 
-  /* Tertiary accent — warm honey */
-  --color-honey: #c9a84e;
-  --color-honey-light: #e4c96f;
+  /* Tertiary — honey / warm accent */
+  --color-honey: #c4a04e;
+  --color-honey-light: #dcc06e;
 
-  /* Accent — olive */
+  /* Olive accent */
   --color-olive: #8a9a5a;
   --color-olive-light: #b0c07a;
 
-  /* Accent — terracotta */
-  --color-terracotta: #c4836e;
-  --color-terracotta-light: #dca08e;
-
   /* Semantic */
   --color-easy: #6bbf7f;
-  --color-moderate: #e8c96e;
-  --color-advanced: #d47070;
+  --color-moderate: #d4b85c;
 
   /* Shadows */
-  --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px -1px rgba(0, 0, 0, 0.08);
-  --shadow-card-hover: 0 8px 12px -3px rgba(0, 0, 0, 0.15), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.15), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-card-hover: 0 8px 16px -4px rgba(0, 0, 0, 0.2), 0 4px 8px -4px rgba(0, 0, 0, 0.1);
 
   /* Typography */
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -77,13 +72,13 @@ img {
 }
 
 a {
-  color: var(--color-sage-light);
+  color: var(--color-primary-light);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 a:hover {
-  color: var(--color-sage);
+  color: var(--color-primary);
 }
 
 /* --- Utility --- */
@@ -122,10 +117,10 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 40;
-  background-color: rgba(26, 29, 27, 0.95);
+  background-color: rgba(26, 29, 27, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(36, 40, 36, 0.6);
+  border-bottom: 1px solid rgba(48, 56, 48, 0.5);
 }
 
 .header-inner {
@@ -153,13 +148,14 @@ a:hover {
   color: var(--color-dark-text);
 }
 
-.logo-icon {
-  font-size: 1.5rem;
+.logo-svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
 }
 
 .logo-text {
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 600;
   display: none;
 }
 
@@ -191,13 +187,13 @@ a:hover {
   border-radius: 0.5rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: rgba(228, 232, 227, 0.6);
+  color: rgba(228, 232, 227, 0.55);
   transition: all 0.2s;
 }
 
 .nav-links a:hover {
   color: var(--color-dark-text);
-  background-color: rgba(36, 40, 36, 0.5);
+  background-color: rgba(48, 56, 48, 0.5);
 }
 
 .mobile-menu-btn {
@@ -312,9 +308,9 @@ a:hover {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(107, 154, 107, 0.08) 0%,
-    var(--color-dark-bg) 50%,
-    rgba(160, 128, 96, 0.05) 100%
+    rgba(90, 143, 90, 0.06) 0%,
+    var(--color-dark-bg) 40%,
+    rgba(139, 109, 75, 0.04) 100%
   );
 }
 
@@ -338,8 +334,7 @@ a:hover {
   }
 }
 
-.hero-icon {
-  font-size: 3rem;
+.hero-logo {
   margin-bottom: 1.5rem;
   display: inline-block;
 }
@@ -366,17 +361,17 @@ a:hover {
 }
 
 .hero h1 span {
-  color: var(--color-sage-light);
+  color: var(--color-primary-light);
 }
 
 .hero-subtitle {
   font-size: 1.125rem;
-  color: rgba(228, 232, 227, 0.7);
+  color: rgba(228, 232, 227, 0.65);
   margin-top: 1.25rem;
   max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 @media (min-width: 640px) {
@@ -410,15 +405,15 @@ a:hover {
 }
 
 .btn-primary {
-  background-color: var(--color-sage);
+  background-color: var(--color-primary);
   color: #fff;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-sage-dark);
+  background-color: var(--color-primary-dark);
   color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .btn-secondary {
@@ -462,21 +457,108 @@ a:hover {
 
 .section-subtitle {
   font-size: 0.9375rem;
-  color: rgba(228, 232, 227, 0.6);
+  color: rgba(228, 232, 227, 0.55);
   margin-top: 0.5rem;
   max-width: 36rem;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* --- How It Works (Steps) --- */
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.step-card {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.step-number {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background-color: rgba(90, 143, 90, 0.1);
+  border: 1.5px solid rgba(90, 143, 90, 0.25);
+  color: var(--color-primary-light);
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-dark-text);
+  margin-bottom: 0.375rem;
+}
+
+.step-desc {
+  font-size: 0.8125rem;
+  color: rgba(228, 232, 227, 0.6);
+  line-height: 1.55;
+}
+
+/* --- Principles (2x2 Grid) --- */
+.principles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+.principle-card {
+  background-color: var(--color-dark-surface);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  transition: all 0.2s;
+}
+
+.principle-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.principle-icon {
+  margin-bottom: 0.75rem;
+}
+
+.principle-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-dark-text);
+  margin-bottom: 0.375rem;
+}
+
+.principle-desc {
+  font-size: 0.8125rem;
+  color: rgba(228, 232, 227, 0.6);
+  line-height: 1.55;
+}
+
 /* --- Card Grid --- */
 .card-grid {
   display: grid;
   gap: 1rem;
-}
-
-.card-grid--2 {
-  grid-template-columns: 1fr;
 }
 
 .card-grid--3 {
@@ -487,44 +569,32 @@ a:hover {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.card-grid--5 {
-  grid-template-columns: repeat(2, 1fr);
-}
-
 @media (min-width: 640px) {
   .card-grid {
     gap: 1.25rem;
   }
 
-  .card-grid--2 {
+  .card-grid--3 {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .card-grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
   .card-grid--3 {
     grid-template-columns: repeat(3, 1fr);
   }
 
   .card-grid--4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .card-grid--5 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .card-grid--4 {
     grid-template-columns: repeat(4, 1fr);
   }
-
-  .card-grid--5 {
-    grid-template-columns: repeat(5, 1fr);
-  }
 }
 
-/* --- Cards --- */
-.card {
+/* --- Space Cards (Growing Spaces) --- */
+.space-card {
   background-color: var(--color-dark-surface);
   border-radius: 0.75rem;
   padding: 1.25rem;
@@ -533,86 +603,90 @@ a:hover {
 }
 
 @media (min-width: 640px) {
-  .card {
+  .space-card {
     padding: 1.5rem;
   }
 }
 
-.card:hover {
+.space-card:hover {
   box-shadow: var(--shadow-card-hover);
   transform: translateY(-2px);
 }
 
-.card-icon {
-  font-size: 1.875rem;
+.space-icon {
   margin-bottom: 0.75rem;
 }
 
-.card-icon--sm {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.card-title {
+.space-title {
   font-size: 1rem;
   font-weight: 600;
   color: var(--color-dark-text);
   margin-bottom: 0.375rem;
 }
 
-.card-desc {
+.space-desc {
   font-size: 0.8125rem;
   color: rgba(228, 232, 227, 0.6);
   line-height: 1.5;
 }
 
-/* Icon card (Why Grow) */
-.icon-card {
-  text-align: center;
-}
-
-.icon-card .card-icon {
-  width: 3.5rem;
-  height: 3.5rem;
-  margin: 0 auto 1rem;
-  border-radius: 1rem;
-  background-color: rgba(107, 154, 107, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-}
-
-/* Environment cards (Start Anywhere) */
-.env-card .card-meta {
-  margin-top: 0.75rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.375rem;
-}
-
-.env-card .card-meta-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.75rem;
-  color: rgba(228, 232, 227, 0.5);
-}
-
-.env-card .card-meta-item span:first-child {
-  color: rgba(228, 232, 227, 0.35);
-  flex-shrink: 0;
-  width: 5rem;
-}
-
-/* Crop cards */
-.crop-card .crop-badges {
+.space-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.375rem;
   margin-top: 0.75rem;
 }
 
+/* --- Guide Cards (What to Grow) --- */
+.guide-card {
+  background-color: var(--color-dark-surface);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: var(--shadow-card);
+  transition: all 0.2s;
+}
+
+@media (min-width: 640px) {
+  .guide-card {
+    padding: 1.5rem;
+  }
+}
+
+.guide-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.guide-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.guide-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-dark-text);
+  margin-bottom: 0.375rem;
+}
+
+.guide-desc {
+  font-size: 0.8125rem;
+  color: rgba(228, 232, 227, 0.6);
+  line-height: 1.5;
+}
+
+.guide-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  font-size: 0.6875rem;
+  color: rgba(228, 232, 227, 0.4);
+}
+
+/* --- Badges --- */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -624,91 +698,117 @@ a:hover {
 }
 
 .badge--easy {
-  background-color: rgba(107, 191, 127, 0.12);
+  background-color: rgba(107, 191, 127, 0.1);
   color: var(--color-easy);
 }
 
 .badge--moderate {
-  background-color: rgba(232, 201, 110, 0.12);
+  background-color: rgba(212, 184, 92, 0.1);
   color: var(--color-moderate);
 }
 
-.badge--advanced {
-  background-color: rgba(212, 112, 112, 0.12);
-  color: var(--color-advanced);
-}
-
 .badge--neutral {
-  background-color: rgba(228, 232, 227, 0.08);
-  color: rgba(228, 232, 227, 0.5);
+  background-color: rgba(228, 232, 227, 0.06);
+  color: rgba(228, 232, 227, 0.45);
 }
 
-/* --- Comparison Table (Growing Systems) --- */
-.comparison-table-wrapper {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  border-radius: 0.75rem;
+/* --- Systems Section --- */
+.systems-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .systems-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .systems-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.system-card {
   background-color: var(--color-dark-surface);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
   box-shadow: var(--shadow-card);
+  transition: all 0.2s;
 }
 
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.8125rem;
-  min-width: 36rem;
+@media (min-width: 640px) {
+  .system-card {
+    padding: 1.5rem;
+  }
 }
 
-.comparison-table thead {
-  background-color: var(--color-dark-elevated);
+.system-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
 }
 
-.comparison-table th {
-  padding: 0.75rem 1rem;
-  text-align: left;
-  font-weight: 600;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: rgba(228, 232, 227, 0.5);
-  white-space: nowrap;
+.system-icon {
+  margin-bottom: 0.75rem;
 }
 
-.comparison-table td {
-  padding: 0.75rem 1rem;
-  border-top: 1px solid rgba(51, 58, 51, 0.5);
-  color: rgba(228, 232, 227, 0.8);
-}
-
-.comparison-table tbody tr:hover {
-  background-color: rgba(51, 58, 51, 0.3);
-}
-
-.comparison-table .system-name {
+.system-title {
+  font-size: 1rem;
   font-weight: 600;
   color: var(--color-dark-text);
-  white-space: nowrap;
+  margin-bottom: 0.375rem;
 }
 
-.comparison-table .system-icon {
-  margin-right: 0.5rem;
+.system-desc {
+  font-size: 0.8125rem;
+  color: rgba(228, 232, 227, 0.6);
+  line-height: 1.5;
+  margin-bottom: 1rem;
 }
 
-.rating-dots {
+.system-stats {
   display: flex;
-  gap: 0.25rem;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.rating-dot {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background-color: rgba(228, 232, 227, 0.15);
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.rating-dot.filled {
-  background-color: var(--color-sage-light);
+.stat-label {
+  font-size: 0.6875rem;
+  color: rgba(228, 232, 227, 0.4);
+  width: 5rem;
+  flex-shrink: 0;
 }
+
+.stat-bar {
+  flex: 1;
+  height: 4px;
+  background-color: rgba(228, 232, 227, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.stat-fill {
+  display: block;
+  height: 100%;
+  border-radius: 2px;
+  background-color: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.stat-fill[data-level="1"] { width: 20%; }
+.stat-fill[data-level="2"] { width: 40%; }
+.stat-fill[data-level="3"] { width: 60%; }
+.stat-fill[data-level="4"] { width: 80%; }
+.stat-fill[data-level="5"] { width: 100%; }
 
 /* --- Tools Section --- */
 .tools-grid {
@@ -739,42 +839,13 @@ a:hover {
   font-weight: 500;
   padding: 0.125rem 0.5rem;
   border-radius: 0.25rem;
-  background-color: rgba(107, 154, 107, 0.12);
-  color: var(--color-sage-light);
+  background-color: rgba(90, 143, 90, 0.1);
+  color: var(--color-primary-light);
 }
 
 .tools-category-title .label-tag--optional {
-  background-color: rgba(228, 232, 227, 0.08);
-  color: rgba(228, 232, 227, 0.5);
-}
-
-.tool-item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  background-color: rgba(51, 58, 51, 0.3);
-  transition: background-color 0.2s;
-}
-
-.tool-item:hover {
-  background-color: rgba(51, 58, 51, 0.5);
-}
-
-.tool-item-icon {
-  font-size: 1.25rem;
-  flex-shrink: 0;
-}
-
-.tool-item-text {
-  font-size: 0.8125rem;
-  color: rgba(228, 232, 227, 0.7);
-}
-
-.tool-item-name {
-  font-weight: 500;
-  color: var(--color-dark-text);
+  background-color: rgba(228, 232, 227, 0.06);
+  color: rgba(228, 232, 227, 0.45);
 }
 
 .tool-item-list {
@@ -783,69 +854,35 @@ a:hover {
   gap: 0.5rem;
 }
 
-/* --- Seasonal Grid --- */
-.seasonal-grid {
-  display: grid;
-  grid-template-columns: auto repeat(4, 1fr);
-  border-radius: 0.75rem;
-  overflow: hidden;
-  background-color: var(--color-dark-surface);
-  box-shadow: var(--shadow-card);
+.tool-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: rgba(48, 56, 48, 0.25);
+  transition: background-color 0.2s;
+}
+
+.tool-item:hover {
+  background-color: rgba(48, 56, 48, 0.45);
+}
+
+.tool-icon {
+  flex-shrink: 0;
+}
+
+.tool-item-text {
   font-size: 0.8125rem;
+  color: rgba(228, 232, 227, 0.65);
 }
 
-.seasonal-cell {
-  padding: 0.625rem 0.75rem;
-  border-right: 1px solid rgba(51, 58, 51, 0.5);
-  border-bottom: 1px solid rgba(51, 58, 51, 0.5);
-  color: rgba(228, 232, 227, 0.7);
-}
-
-.seasonal-cell:last-child {
-  border-right: none;
-}
-
-.seasonal-header {
-  background-color: var(--color-dark-elevated);
-  font-weight: 600;
-  font-size: 0.6875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: rgba(228, 232, 227, 0.5);
-}
-
-.seasonal-season {
-  font-weight: 600;
+.tool-item-name {
+  font-weight: 500;
   color: var(--color-dark-text);
-  white-space: nowrap;
 }
 
-.seasonal-crop-tag {
-  display: inline-block;
-  padding: 0.125rem 0.375rem;
-  border-radius: 0.25rem;
-  font-size: 0.6875rem;
-  margin: 0.125rem;
-  background-color: rgba(107, 154, 107, 0.1);
-  color: var(--color-sage-light);
-}
-
-.seasonal-crop-tag--warm {
-  background-color: rgba(201, 168, 78, 0.1);
-  color: var(--color-honey-light);
-}
-
-.seasonal-crop-tag--soil {
-  background-color: rgba(160, 128, 96, 0.1);
-  color: var(--color-soil-light);
-}
-
-.seasonal-crop-tag--olive {
-  background-color: rgba(138, 154, 90, 0.1);
-  color: var(--color-olive-light);
-}
-
-/* Mobile: make seasonal table scrollable */
+/* --- Seasonal Grid --- */
 .seasonal-grid-wrapper {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -869,24 +906,55 @@ a:hover {
   font-size: 0.6875rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: rgba(228, 232, 227, 0.5);
+  color: rgba(228, 232, 227, 0.45);
 }
 
 .seasonal-table td,
 .seasonal-table tbody th {
   padding: 0.625rem 0.75rem;
-  border-top: 1px solid rgba(51, 58, 51, 0.5);
+  border-top: 1px solid rgba(48, 56, 48, 0.5);
   color: rgba(228, 232, 227, 0.7);
+}
+
+.seasonal-season {
+  font-weight: 600;
+  color: var(--color-dark-text);
+  white-space: nowrap;
+}
+
+.seasonal-crop-tag {
+  display: inline-block;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.6875rem;
+  margin: 0.125rem;
+  background-color: rgba(90, 143, 90, 0.08);
+  color: var(--color-primary-light);
+}
+
+.seasonal-crop-tag--warm {
+  background-color: rgba(196, 160, 78, 0.08);
+  color: var(--color-honey-light);
+}
+
+.seasonal-crop-tag--soil {
+  background-color: rgba(139, 109, 75, 0.08);
+  color: var(--color-soil-light);
+}
+
+.seasonal-crop-tag--olive {
+  background-color: rgba(138, 154, 90, 0.08);
+  color: var(--color-olive-light);
 }
 
 .seasonal-footnote {
   text-align: center;
   font-size: 0.75rem;
-  color: rgba(228, 232, 227, 0.35);
+  color: rgba(228, 232, 227, 0.3);
   margin-top: 0.75rem;
 }
 
-/* --- Compost / Seed Section --- */
+/* --- Seed Saving & Composting (Split) --- */
 .split-section {
   display: grid;
   grid-template-columns: 1fr;
@@ -907,6 +975,10 @@ a:hover {
   box-shadow: var(--shadow-card);
 }
 
+.split-icon {
+  margin-bottom: 0.75rem;
+}
+
 .split-card-title {
   font-size: 1.125rem;
   font-weight: 600;
@@ -916,7 +988,7 @@ a:hover {
 
 .split-card-subtitle {
   font-size: 0.8125rem;
-  color: rgba(228, 232, 227, 0.5);
+  color: rgba(228, 232, 227, 0.45);
   margin-bottom: 1rem;
 }
 
@@ -932,13 +1004,14 @@ a:hover {
   align-items: flex-start;
   gap: 0.625rem;
   font-size: 0.8125rem;
-  color: rgba(228, 232, 227, 0.7);
-  line-height: 1.5;
+  color: rgba(228, 232, 227, 0.65);
+  line-height: 1.55;
 }
 
 .split-card-list li span:first-child {
   flex-shrink: 0;
   margin-top: 0.125rem;
+  color: var(--color-soil-light);
 }
 
 /* --- Final CTA --- */
@@ -952,9 +1025,9 @@ a:hover {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(107, 154, 107, 0.06) 0%,
+    rgba(90, 143, 90, 0.05) 0%,
     transparent 50%,
-    rgba(160, 128, 96, 0.04) 100%
+    rgba(139, 109, 75, 0.03) 100%
   );
 }
 
@@ -987,14 +1060,14 @@ a:hover {
 
 .final-cta p {
   font-size: 1rem;
-  color: rgba(228, 232, 227, 0.65);
-  line-height: 1.6;
+  color: rgba(228, 232, 227, 0.6);
+  line-height: 1.7;
   margin-bottom: 2rem;
 }
 
 /* --- Footer --- */
 .site-footer {
-  background-color: rgba(36, 40, 36, 0.5);
+  background-color: rgba(34, 38, 32, 0.6);
   border-top: 1px solid var(--color-dark-surface);
 }
 
@@ -1024,13 +1097,13 @@ a:hover {
 
 @media (min-width: 1024px) {
   .footer-grid {
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
   }
 }
 
 .footer-brand p {
   font-size: 0.8125rem;
-  color: rgba(228, 232, 227, 0.5);
+  color: rgba(228, 232, 227, 0.45);
   line-height: 1.6;
   margin-top: 0.75rem;
   max-width: 20rem;
@@ -1054,20 +1127,20 @@ a:hover {
 
 .footer-links a {
   font-size: 0.875rem;
-  color: rgba(228, 232, 227, 0.6);
+  color: rgba(228, 232, 227, 0.55);
 }
 
 .footer-links a:hover {
-  color: var(--color-sage-light);
+  color: var(--color-primary-light);
 }
 
 .footer-bottom {
   margin-top: 2.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(36, 40, 36, 0.6);
+  border-top: 1px solid rgba(48, 56, 48, 0.5);
   text-align: center;
   font-size: 0.75rem;
-  color: rgba(228, 232, 227, 0.3);
+  color: rgba(228, 232, 227, 0.25);
 }
 
 /* --- Animations --- */

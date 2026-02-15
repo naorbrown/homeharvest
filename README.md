@@ -1,25 +1,18 @@
 # Home Harvest
 
-**Grow Food. Grow Freedom.**
+**Grow Food at Home. Any Space. Any Level.**
 
 **[Live Site](https://naorbrown.github.io/homeharvest/)**
 
-A clean, minimalist educational website empowering individuals to grow their own food at home — balcony, rooftop, backyard, or indoors.
+A practical, actionable website for growing food at home — windowsill, balcony, backyard, or indoor setup. Beginner to advanced.
 
 Part of the brand suite alongside [The Clean Pantry](https://naorbrown.github.io/the-clean-pantry/), [Plant Therapy](https://naorbrown.github.io/plant-therapy/), and [Clean Snacks](https://naorbrown.github.io/clean-snacks/).
 
 ## Brand Philosophy
 
-Self-empowerment through food sovereignty. The site makes food production feel accessible, calm, achievable, and immediate.
+Self-empowerment through food sovereignty. Practical guidance that makes home food production feel achievable and immediate.
 
-**Core pillars:**
-- Independence from fragile supply chains
-- Nutrient density and food quality
-- Simplicity over perfection
-- Urban and small-space viability
-- Calm empowerment (not fear-based)
-
-**Tone:** Grounded, encouraging, competent, minimal, practical, empowering.
+**Tone:** Grounded, encouraging, competent, earthy, practical.
 
 ## Design System
 
@@ -27,19 +20,19 @@ Self-empowerment through food sovereignty. The site makes food production feel a
 | Token | Hex | Usage |
 |-------|-----|-------|
 | Dark BG | `#1a1d1b` | Base background |
-| Dark Surface | `#242824` | Card backgrounds |
-| Dark Elevated | `#333a33` | Hover states, table headers |
+| Dark Surface | `#222620` | Card backgrounds |
+| Dark Elevated | `#303830` | Hover states, headers |
 | Dark Text | `#e4e8e3` | Body text |
-| Sage | `#6b9a6b` | Primary accent / CTAs |
-| Sage Light | `#8dc09a` | Hero highlights, links |
-| Soil | `#a08060` | Secondary warm accent |
-| Honey | `#c9a84e` | Tertiary accent |
+| Primary | `#5a8f5a` | Earthy green accent |
+| Primary Light | `#7ab87a` | Highlights, links |
+| Soil | `#8b6d4b` | Warm brown accent |
+| Honey | `#c4a04e` | Tertiary warm accent |
 
 ### Typography
-- **Font:** Inter (variable weight, loaded via Google Fonts)
-- **Headlines:** 500–700 weight, clean modern sans-serif
-- **Body:** 400 weight, 1.6 line-height, comfortable reading
-- **No pure black (#000)** — soft contrast throughout
+- **Font:** Inter (variable weight, Google Fonts)
+- **Headlines:** 600–700 weight
+- **Body:** 400 weight, 1.6 line-height
+- **No pure black** — soft contrast throughout
 
 ### Layout
 - Card-based sections with generous vertical spacing
@@ -49,56 +42,31 @@ Self-empowerment through food sovereignty. The site makes food production feel a
 
 ## Sections
 
-1. **Hero** — Mission statement and primary CTA
-2. **Why Grow Your Own** — Five benefit cards (pesticides, nutrients, savings, resilience, flavor)
-3. **Start Anywhere** — Four environment cards (balcony, windowsill, backyard, indoor)
-4. **Beginner Crops** — Five crop cards with difficulty badges
-5. **Growing Systems** — Comparison table (soil, hydro, vertical, containers)
-6. **Tools & Setup** — Essentials vs. optional upgrades
-7. **Seasonal Planting Guide** — Color-coded grid by season and crop type
-8. **Seed Saving & Composting** — Closed-loop growing education
-9. **Final CTA** — Encouragement and action button
+1. **Hero** — Value proposition with SVG logo and dual CTAs
+2. **How It Works** — Three-step onboarding flow
+3. **Why Home Harvest** — Four principles in 2x2 grid
+4. **Growing Spaces** — Four space types (windowsill, balcony, backyard, indoor)
+5. **What to Grow** — Six crop guides with difficulty badges
+6. **Growing Systems** — Four systems with stat bars (soil, hydro, vertical, containers)
+7. **What You Need** — Essential tools vs. upgrades
+8. **Seasonal Planting Guide** — Crop timing by season
+9. **Close the Loop** — Seed saving and composting
+10. **Final CTA** — Encouragement and action
 
 ## Tech Stack
 
 - **HTML5** — Semantic markup with ARIA labels
-- **CSS3** — Custom properties, grid, flexbox, no preprocessor
+- **CSS3** — Custom properties, grid, flexbox
 - **Vanilla JS** — Intersection Observer animations, smooth scroll, mobile nav
+- **SVG** — Inline icons and logo (no emoji dependencies)
 
 No frameworks. No build tools. No dependencies.
 
-## Deploy via GitHub Pages
+## Assets
 
-1. Push to a GitHub repository
-2. Go to **Settings → Pages**
-3. Set source to **main branch, root (/)**
-4. Site will be live at `https://<username>.github.io/homeharvest/`
-
-## Adding Sections
-
-1. Add HTML to `index.html` following the existing section pattern:
-   ```html
-   <div class="section-divider" role="separator"></div>
-   <section class="section" id="new-section" aria-labelledby="new-section-heading">
-     <div class="container">
-       <div class="section-header fade-in">
-         <h2 class="section-title" id="new-section-heading">Section Title</h2>
-         <p class="section-subtitle">Brief description.</p>
-       </div>
-       <!-- Content here -->
-     </div>
-   </section>
-   ```
-2. Add navigation link to the header nav
-3. Use existing CSS classes (`card`, `card-grid`, `badge`, etc.)
-
-## Performance Standards
-
-- Lighthouse score: 95+ target
-- Sub-2s mobile load
-- No render-blocking scripts (JS loaded at end of body)
-- Minimal asset weight — emoji icons, no image dependencies
-- `prefers-reduced-motion` respected for animations
+- `logo.svg` — Primary logo (raised bed with plants)
+- `favicon.svg` — Browser tab icon
+- `og-image.png` — 1200x630 social sharing image
 
 ## License
 
