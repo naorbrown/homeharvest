@@ -252,6 +252,61 @@
     });
   }
 
+  // --- CMD-K Search ---
+  function initSearch() {
+    var dialog = document.getElementById('search-dialog');
+    var closeBtn = document.getElementById('search-close');
+    var openBtn = document.getElementById('search-open');
+    var pagefindInitialized = false;
+
+    function openSearch() {
+      if (!dialog) return;
+      dialog.showModal();
+      document.documentElement.style.overflow = 'hidden';
+      if (!pagefindInitialized && typeof window.PagefindUI !== 'undefined') {
+        new window.PagefindUI({
+          element: '#search-container',
+          showImages: false,
+          showSubResults: false,
+          resetStyles: false
+        });
+        pagefindInitialized = true;
+      }
+      setTimeout(function () {
+        var input = dialog.querySelector('.pagefind-ui__search-input');
+        if (input) input.focus();
+      }, 100);
+    }
+
+    function closeSearch() {
+      if (!dialog) return;
+      dialog.close();
+      document.documentElement.style.overflow = '';
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeSearch);
+    if (openBtn) openBtn.addEventListener('click', openSearch);
+
+    if (dialog) {
+      dialog.addEventListener('click', function (e) {
+        if (e.target === dialog) closeSearch();
+      });
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        if (dialog && dialog.open) {
+          closeSearch();
+        } else {
+          openSearch();
+        }
+      }
+    });
+
+    window.__openSearch = openSearch;
+  }
+
   // --- Initialize everything ---
   document.addEventListener('DOMContentLoaded', function () {
     initFadeAnimations();
@@ -262,5 +317,6 @@
     initReadingProgress();
     initTocHighlight();
     initCollapsibleSections();
+    initSearch();
   });
 })();

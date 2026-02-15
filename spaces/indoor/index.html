@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/homeharvest/css/styles.css">
+  <link rel="stylesheet" href="/homeharvest/pagefind/pagefind-ui.css">
   <link rel="icon" href="/homeharvest/favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -37,8 +38,14 @@
           <li><a href="/homeharvest/spaces/">Spaces</a></li>
           <li><a href="/homeharvest/guides/">Guides</a></li>
           <li><a href="/homeharvest/systems/">Systems</a></li>
+          <li><a href="/homeharvest/faq/">FAQ</a></li>
         </ul>
       </nav>
+      <button type="button" id="search-open" class="search-trigger" aria-label="Search (Cmd+K)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <span class="search-trigger-label">Search</span>
+        <kbd class="search-kbd">&#8984;K</kbd>
+      </button>
       <button type="button" class="mobile-menu-btn" aria-label="Open menu" onclick="document.getElementById('mobile-nav').showModal()">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/></svg>
       </button>
@@ -54,10 +61,30 @@
         <li><a href="/homeharvest/spaces/" onclick="document.getElementById('mobile-nav').close()">Spaces</a></li>
         <li><a href="/homeharvest/guides/" onclick="document.getElementById('mobile-nav').close()">Guides</a></li>
         <li><a href="/homeharvest/systems/" onclick="document.getElementById('mobile-nav').close()">Systems</a></li>
+        <li><a href="/homeharvest/faq/" onclick="document.getElementById('mobile-nav').close()">FAQ</a></li>
       </ul>
     </div>
   </dialog>
   <!-- HEADER:END -->
+
+  <!-- SEARCH:START -->
+  <dialog id="search-dialog" class="search-overlay" aria-label="Search">
+    <div class="search-overlay-inner">
+      <div class="search-overlay-card">
+        <div class="search-overlay-header">
+          <div class="search-hint">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <span>Search guides, spaces, and systems</span>
+          </div>
+          <button id="search-close" type="button" class="search-close-btn" aria-label="Close search">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div id="search-container" class="search-results-area"></div>
+      </div>
+    </div>
+  </dialog>
+  <!-- SEARCH:END -->
 
   <div class="reading-progress" aria-hidden="true"><div class="reading-progress-bar"></div></div>
 
@@ -83,6 +110,28 @@
           <span>2&ndash;20 sq ft</span>
           <span>$80&ndash;250 to start</span>
           <span>Year-round</span>
+        </div>
+        <div class="quick-stats">
+          <div class="quick-stat">
+            <svg class="quick-stat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <span class="quick-stat-value">Grow lights</span>
+            <span class="quick-stat-label">Light</span>
+          </div>
+          <div class="quick-stat">
+            <svg class="quick-stat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C12 2 5 10 5 14a7 7 0 0014 0c0-4-7-12-7-12z"/></svg>
+            <span class="quick-stat-value">Every 2&ndash;3 days</span>
+            <span class="quick-stat-label">Watering</span>
+          </div>
+          <div class="quick-stat">
+            <svg class="quick-stat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3H3v18h18V3zM3 9h4M3 15h4"/></svg>
+            <span class="quick-stat-value">2&ndash;20 sq ft</span>
+            <span class="quick-stat-label">Space</span>
+          </div>
+          <div class="quick-stat">
+            <svg class="quick-stat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <span class="quick-stat-value">Year-round</span>
+            <span class="quick-stat-label">Season</span>
+          </div>
         </div>
       </div>
 
@@ -321,6 +370,7 @@
             <li><a href="/homeharvest/spaces/">Growing Spaces</a></li>
             <li><a href="/homeharvest/guides/">Crop Guides</a></li>
             <li><a href="/homeharvest/systems/">Growing Systems</a></li>
+            <li><a href="/homeharvest/faq/">FAQ</a></li>
           </ul>
         </div>
         <div>
@@ -349,6 +399,7 @@
   <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top">
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 13V3"/><path d="M3 7L8 2L13 7"/></svg>
   </button>
+  <script src="/homeharvest/pagefind/pagefind-ui.js"></script>
   <script src="/homeharvest/js/script.js"></script>
 </body>
 </html>
